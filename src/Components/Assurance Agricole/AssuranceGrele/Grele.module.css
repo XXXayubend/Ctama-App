@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root{
+    --primaryColor: hsl(221, 55%, 56%);
+    --hoverColor: hsl(26, 75%, 76%);
+    --paleOrange: hsl(23, 94%, 50%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 8%);
+    --bgColor: hsl(113, 11%, 85%);
+    --inputColor: hsl(330, 12%, 97%);
+    --inputColor: hsl(154, 14%, 90%);
+
+    
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;  
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.grid{
+    display: grid;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+html{
+    font-size: 90%;
+}
+
+img, video{
+    height: auto;
+    width: 70%;
+}
+
+
+
+.top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grelePage{
+    display: grid;
+    height: 70vh;
+    width: 80vh;
+    border: 1px solid #0000;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0 0 0 0.1);
+    border-radius: 10px; 
+}
+
+.container{
+    margin: 0 auto;
+    padding: 10px;
+    padding-top: 20px;
+    margin-left: 20vh;
+} 
+
+.videoDiv video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 88%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    margin-left: 23vh;
+} 
+.sidebar{
+    margin-top: -11vh;
+}
+
+.bigTitle{
+    padding: .3rem;
+    background: rgba(12, 27, 93, 0.932);
+    border-radius: 10px;
+    color: white;
+    align-items: end;
+    margin-top: 1vh;
+    margin-left: 23vh;
+    font-size: 15px;
+    justify-content: center;
+    gap: .5rem;
+    transition: .3rem ease;
+    width: 119%;
+    height: 6vh;
+}
+
+/* Faixing the titles & h2 & p */
+.textDiv{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: -110vh;
+} 
+.inputDivOne{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 1vh;
+    margin-left: 10vh;
+}
+.inputDivTow{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: -34vh;
+    margin-left: 50vh;
+}
+.inputDivThree{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: -37vh;
+    margin-left: 90vh;
+}
+
+.textD{
+    font-size: 2.5vh;
+    color: rgba(12, 27, 93, 0.932);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-left: 17vh;
+    margin-top: 10vh;
+}
+.InputWrapper{
+    /* display: flex; */
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px;
+    display: block;
+}
+.inputLabel{
+    color: rgba(12, 27, 93, 0.932);
+    margin-left: 11vh;
+    font-size: 15px;
+    font-weight: 500;
+    display: block;
+    padding: 1vh;
+}
+
+.iW{
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    margin-left: 10vh;
+    padding-top: 1vh;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+.btn{
+    padding: .7rem;
+    background: rgba(12, 27, 93, 0.932);
+    border-radius: 10px;
+    color: var(--whiteColor);
+    align-items: end;
+    margin: auto;
+    justify-content: center;
+    font-size: 16px;
+    margin-left: 20vh;
+    cursor: pointer;
+    margin-top: 4vh;
+}

@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root{
+    --primaryColor: hsl(221, 55%, 56%);
+    --hoverColor: hsl(26, 75%, 76%);
+    --paleOrange: hsl(23, 94%, 50%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 8%);
+    --bgColor: hsl(113, 11%, 85%);
+    --inputColor: hsl(330, 12%, 97%);
+    --inputColor: hsl(154, 14%, 90%);
+
+    
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;  
+}
+html{
+    font-size: 90%;
+}
+
+video{
+    height: auto;
+    width: 70%;
+}
+.top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*  Page Styling */
+.calculPage{
+    display: grid;
+    top: 1vh;
+    width: 100%;
+    height: 70%;
+    border: 1px solid #0000;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0 0 0 0.1);
+    border-radius: 10px; 
+}
+.container{
+    margin: 0 auto;
+    padding: 10px;
+    padding-top: 20px;
+    /* margin-top: 20vh; */
+} 
+.videoDiv video{
+    position: absolute;
+    top: 4vh;
+    left: 0;
+    width: 87%;
+    height: 90%;
+    object-fit: cover;
+    z-index: -1;
+    margin-left: 25vh;
+}
+.sidebar{
+    margin-left: 23vh;
+    margin-top: -2vh;
+}
+/* Faixing the titles & h2 & p */
+.textDiv{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: -100vh;
+    margin-left: 20vh;
+}
+.text{
+    font-size: 2.5vh;
+    font-weight: 800;
+    color: #082faf;
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    margin-left: -6vh;
+    margin-top: 10vh;
+} 
+.inputDivOne{
+    display: grid;
+    margin-top: 1vh;
+    margin-bottom: 10px;
+    margin-left: 30vh;
+}
+.inputDivTow{
+    display: grid;
+    margin-bottom: 10px;
+    margin-left: 70vh;
+    margin-top: -37.5vh;
+}
+.inputWrapper{
+    margin-bottom: 20px;
+    margin-left: 10vh;
+}
+.inputWrappLabel {
+    color: #082faf;
+    font-weight: 500;
+    font-size: 15px;
+    display: block;
+}
+.iW{
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    padding-top: 1vh;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+.btn{
+    background-color: #082faf;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 1vh;
+    margin-left: -30vh;
+}

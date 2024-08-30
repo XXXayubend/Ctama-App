@@ -1,0 +1,46 @@
+/* Footer.css */
+.footerPage {
+    position: fixed; /* position the footer at the bottom of the page */
+    bottom: 0; /* stick to the bottom of the page */
+    width: 100%; /* span the entire width of the page */
+    background-color: #197de7; /* blue background color */
+    padding: 20px;
+    height: 73px; /* set the height to auto, so it only takes up the space needed */
+    border-radius: 20px;
+  }
+  
+  .container {
+    max-width: 1200px; /* adjust the max width to your liking */
+    margin: 0 auto; /* center the container */
+    padding: 20px;
+  }
+  
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .textDiv {
+    flex-basis: 100%; /* make the text div take up the full width */
+  }
+  
+  .textDiv p {
+    display: inline-block; /* display paragraphs on the same line */
+    margin-right: 10px; /* add some space between paragraphs */
+    border-right: 1px solid #ccc; /* add a separator line between paragraphs */
+    padding-right: 20px; /* add some space between the text and the separator line */
+    color: black;
+  }
+  
+  .textDiv p:last-child {
+    border-right: none; /* remove the separator line from the last paragraph */
+  }
+  
+  .textDiv p svg {
+    margin-right: 10px; /* add some space between the icon and the text */
+  }
+
+  .main-content {
+    margin-bottom: 100px; /* adjust the value to match the height of your footer */
+  }

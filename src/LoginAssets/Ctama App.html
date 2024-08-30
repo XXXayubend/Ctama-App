@@ -1,0 +1,5524 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://localhost:5173/habitation -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="module">
+import RefreshRuntime from "/@react-refresh"
+RefreshRuntime.injectIntoGlobalHook(window)
+window.$RefreshReg$ = () => {}
+window.$RefreshSig$ = () => (type) => type
+window.__vite_plugin_react_preamble_installed__ = true
+</script>
+
+    <script type="module" src="./Ctama App_files/client"></script>
+
+    
+    <!-- <img src="{LoginAssets/logo.png} alt="> -->
+    <link rel="icon" type="image/svg+xml" href="http://localhost:5173/vite.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ctama App</title>
+  <style type="text/css" data-vite-dev-id="C:/Users/khadh/Desktop/LoginRegistre/client/src/Ap.css">@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root{
+    --primaryColor: hsl(221, 55%, 56%);
+    --hoverColor: hsl(26, 75%, 76%);
+    --paleOrange: hsl(24, 94%, 51%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --bgColor: hsl(113, 11%, 85%);
+    --inputColor: hsl(330, 12%, 97%);
+    --inputColor: hsl(154, 14%, 90%);
+
+    
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;  
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.grid{
+    display: grid;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+html{
+    font-size: 90%;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.icon{
+    font-size: var(--h2FontSize);
+    cursor: pointer;
+}
+
+img, video{
+    height: auto;
+    width: 100%;
+}
+
+.message{
+    display: none;
+}
+
+.showMessage{
+    display: block;
+    color: var(--whiteColor);
+    padding: 10px;
+    background: rgba(238, 105, 10, 0.979);
+    border-radius: 3px;
+    text-align: center;
+}
+
+.showMessage{
+    display: block;
+    color:var(--whiteColor) ;
+    background: rgb(247 , 114, 5);
+    border-radius: 3px;
+    text-align: center;
+}
+
+.btn{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: .8rem 1rem;
+    color: var(--greyText);
+}
+
+.btn .icon{
+    margin-left: .5rem;
+}
+
+.btn:hover{
+    color: var(--primaryColor);
+    background: var(--paleOrange);
+}
+
+/* Pages Stylings */
+
+.loginPage {
+    height: 100%;
+    width: 170%;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 7px 50px rgb(214, 223, 213);
+    margin-left: -130px;
+    margin-right: 90px;
+
+    .container{
+        height: 75vh;
+        width: 60%;
+        margin: auto;
+        justify-content: space-between;
+        border-radius: 10px;
+        background: hsl(0, 0%, 100%);
+
+        .videoDiv{
+            position: relative;
+            display: flex;
+            flex-basis: 50%;
+            width: 100%;
+            height: 100%;
+            padding: 0 1.5rem;
+            text-align: center;
+            justify-content: center;
+            flex-direction: column;
+            margin: auto;
+            border-radius: 10px;
+            overflow: hidden; 
+            
+            video, .FooterDiv{
+                position: absolute;
+            }
+            video{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+            }
+
+            .textDiv{
+                position: relative;
+
+                .title{
+                    color: var(--whiteColor);
+                    font-size: 35px;
+                    font-weight: 800;
+                    padding-top: 5px;
+                }
+
+                p{
+                    color: var(--whiteColor);
+                    padding: 1rem;
+                    font-weight: 400;
+                }
+            }
+
+            .FooterDiv{
+                bottom: 10px;
+                padding: 0 1rem;
+                height: 60px;
+                background: rgba(255, 255, 255, 0.248);
+                left: 10px;
+                right: 10px;
+                justify-content: space-between;
+                backdrop-filter: blur(1px);
+                border-radius: 10px;
+
+                .text{
+                    color: var(--whiteColor);
+                }
+
+                .btn{
+                    background: var(--whiteColor);
+                    color: var(--primaryColor);
+                    padding: .8rem 1.5rem;
+                    border-radius: 10px;
+                    font-weight: 400;
+                    transition: .3rem ease;  
+                }   
+
+                &:hover{
+                    background: var(--hoverColor);
+                    color: var(--blackColor);
+                }
+            }
+        }
+
+        .formDiv{
+            flex-basis: 50%;
+            margin: auto;
+            flex-direction: column;
+            gap: 1.5rem;
+            transform: translateY(-1rem);
+
+            .headerDiv{
+                /* text-align: center; */
+                padding: 1.5rem 0;
+                background: var(--inputeColor);
+
+                img{
+                    width: 100px;
+                    padding-bottom: .5rem;
+                }
+
+                h3{
+                    font-size: 25px;
+                    color: var(--blackColor);
+                    font-weight: 600;
+                }
+            }
+            .form{
+                gap: 1rem;
+
+                .inputDiv{
+                    .icon{
+                        color: var(--greyText);
+                    }
+
+                    input{
+                        background: none;
+                        outline: none;
+                        border: none;
+                        width: 200px;
+                    }
+
+                    label{
+                        color: var(--blackColor);
+                        font-weight: 400;
+                        font-size: 14px;
+                        padding: .5rem 0;
+                        display: block;
+                    }
+
+                    .input{
+                        gap: .5rem;
+                        padding: 1rem;
+                        background: var(--inputColor);
+                        border-radius: 10px;
+                    }
+                }
+
+                .btn{
+                    padding: .8rem;
+                    background: var(--primaryColor);
+                    border-radius: 10px;
+                    color: var(--whiteColor);
+                    align-items: center;
+                    margin: auto;
+                    justify-content: center;
+                    font-size: 16px;
+                    width: 100%;
+                    gap: .5rem;
+                    transition: .3rem ease;
+
+                    .icon{
+                        font-size: 25px;
+                        transition: .3s ease;
+                    }
+
+                    &:hover{
+                        background: var(--hoverColor);
+                        color: var(--blackColor);
+
+                        .icon{
+                            color: var(--blackColor);
+                            transform: translateX(5px);
+                        }
+                    }
+                }
+
+                .forgotPassword{
+                    font-size: 13px;
+                    color: var(--blackColor);
+                    opacity: .7;
+                    text-align: center;
+
+                    a{
+                        text-decoration: underline;
+                        cursor: pointer;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    
+   
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh; 
+  }
+
+/* .login {
+    width: 80%; 
+    background-color: #fff;
+    padding: 20px;
+  } */
+ 
+</style><style type="text/css" data-vite-dev-id="C:/Users/khadh/Desktop/LoginRegistre/client/src/Components/Register/Register.module.css">@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root{
+    --primaryColor: hsl(221, 55%, 56%);
+    --hoverColor: hsl(26, 75%, 76%);
+    --paleOrange: hsl(24, 94%, 51%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --bgColor: hsl(113, 11%, 85%);
+    --inputColor: hsl(330, 12%, 97%);
+    --inputColor: hsl(154, 14%, 90%);
+
+    
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;  
+}
+
+._flex_3wr6n_59{
+    display: flex;
+    align-items: center;
+}
+
+._grid_3wr6n_69{
+    display: grid;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+html{
+    font-size: 90%;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+._icon_3wr6n_103{
+    font-size: var(--h2FontSize);
+    cursor: pointer;
+}
+
+img, video{
+    height: auto;
+    width: 100%;
+}
+
+._message_3wr6n_123{
+    display: none;
+}
+
+._showMessage_3wr6n_131{
+    display: block;
+    color: var(--whiteColor);
+    padding: 10px;
+    background: rgba(238, 105, 10, 0.979);
+    border-radius: 3px;
+    text-align: center;
+}
+
+._showMessage_3wr6n_131{
+    display: block;
+    color:var(--whiteColor) ;
+    background: rgb(247 , 114, 5);
+    border-radius: 3px;
+    text-align: center;
+}
+
+._btn_3wr6n_163{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: .8rem 1rem;
+    color: var(--greyText);
+}
+
+._btn_3wr6n_163 ._icon_3wr6n_103{
+    margin-left: .5rem;
+}
+
+._btn_3wr6n_163:hover{
+    color: var(--primaryColor);
+    background: var(--paleOrange);
+}
+
+._btnn_3wr6n_197{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: .01rem 2.7rem;
+    color: var(--greyText);
+    margin-left: 37vh;
+    margin-top: 1vh;
+    background: rgb(68, 38, 241);
+}
+
+._btnn_3wr6n_197 ._icon_3wr6n_103{
+    margin-left: .5rem;
+}
+
+._btnn_3wr6n_197:hover{
+    color: var(--primaryColor);
+    background: var(--paleOrange);
+}
+
+/* Pages Stylings */
+
+._registerPage_3wr6n_239 {
+    height: 90vh;
+    width: 170vh;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 7px 50px rgb(214, 223, 213);
+    margin-left: -130px;
+    margin-right: 90px;
+}
+
+._container_3wr6n_261{
+    height: 75vh;
+    width: 50%;
+    margin: auto;
+    justify-content: space-between;
+    border-radius: 10px;
+    background: hsl(0, 0%, 100%);
+}
+
+._videoDiv_3wr6n_279{
+    position: relative;
+    display: flex;
+    flex-basis: 50%;
+    width: 50%;
+    height: 90%;
+    padding: 0 1.5rem;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    margin-left: -18vh;
+    border-radius: 10px;
+    overflow: hidden; 
+    margin-top: 5vh;
+}
+
+video, ._FooterDiv_3wr6n_313{
+    position: absolute;
+}
+
+._video_3wr6n_279{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+._textDiv_3wr6n_339{
+    position: relative;
+}
+
+._title_3wr6n_347{
+    color: var(--whiteColor);
+    font-size: 35px;
+    font-weight: 800;
+    padding-top: 5px;
+}
+
+._textDii_3wr6n_361{
+    color: var(--whiteColor);
+    padding: 1rem;
+    font-weight: 400;
+}
+
+._FooterDiv_3wr6n_313{
+    bottom: 10px;
+    padding: 0 1rem;
+    height: 60px;
+    /* background: rgba(247, 246, 246, 0.248); */
+    left: 10px;
+    right: 10px;
+    justify-content: space-between;
+    backdrop-filter: blur(1px);
+    border-radius: 10px;
+}
+
+._btn_3wr6n_163{
+    background: var(--whiteColor);
+    color: var(--primaryColor);
+    padding: .8rem 1.5rem;
+    border-radius: 10px;
+    font-weight: 400;
+    transition: .3rem ease;  
+}
+
+&:hover{
+    color: var(--blackColor);
+}
+
+._formDiv_3wr6n_423{
+    display: grid;
+    flex-basis: 50%;
+    margin: auto;
+    flex-direction: column;
+    gap: 1.5rem;
+    transform: translateY(-1rem);
+    margin-left: 45vh;
+    margin-top: -70vh;
+}
+
+._formGrid_3wr6n_445{
+    gap: 1rem;
+}
+
+._inputDiv_3wr6n_453{
+    ._icon_3wr6n_103{
+        color: var(--greyText);
+        }
+    }
+
+._input_3wr6n_453 {
+    background: none;
+    outline: none;
+    border: none;
+    width: 200px;
+}
+
+._inputLabel_3wr6n_479{
+    color: var(--blackColor);
+    font-weight: 400;
+    font-size: 14px;
+    padding: .5rem 0;
+    display: block;
+}
+
+._inputWrapper_3wr6n_495{
+    gap: .5rem;
+    padding: .7rem 1rem; 
+    background: var(--inputColor);
+    border-radius: 10px;
+    width: 70%;
+}
+
+._btn_3wr6n_163{
+    padding: .7rem;
+    background: var(--primaryColor);
+    border-radius: 10px;
+    color: var(--whiteColor);
+    align-items: end;
+    margin: auto;
+    justify-content: center;
+    font-size: 16px;
+    width: 40%;
+    gap: .5rem;
+    transition: .3rem ease;
+}
+
+._spa_3wr6n_541{
+    color: aliceblue;
+}
+
+._icon_3wr6n_103{
+    font-size: 30px;
+    transition: .3s ease;
+    padding-top: 5px;
+    padding-right: 10px;
+}
+
+/* .icon{
+    font-size: 25px;
+    transition: .3s ease;
+}
+
+&:hover{
+    color: var(--blackColor);
+}
+
+.icon{
+    color: var(--blackColor);
+    transform: translateX(5px);
+    
+} */
+</style><style type="text/css" data-vite-dev-id="C:/Users/khadh/Desktop/LoginRegistre/client/src/Components/Register/Gouvernant/Gouvernant.module.css">._inputContainer_ivbna_1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 5vh;
+    padding-top: 20px;
+    /* margin-top: -75vh; */
+  }
+  
+  ._inputWrapper_ivbna_19{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-right: 10px;
+  }
+  
+  ._inputWrapperLabel_ivbna_33{
+    font-weight: bold;
+  }
+  
+  ._inputWrapperInput_ivbna_41{
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+</style><style type="text/css" data-vite-dev-id="C:/Users/khadh/Desktop/LoginRegistre/client/src/Components/Sidebar Section/Sidebar.scss">:root {
+  --primaryColor: hsla(234, 79%, 20%, 0.932);
+  --hoverColor: hsl(26, 75%, 76%);
+  --paleOrange: hsl(24, 91%, 50%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --bgColor: hsl(113, 11%, 85%);
+  --inputColor: hsl(330, 12%, 97%);
+  --inputColor: hsl(154, 14%, 90%);
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: .938rem;
+  --smallFontSize: .813rem;
+  --smallestFontSize: .75rem;
+}
+
+.sideBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  margin-left: 1rem;
+  margin-right: 0.1rem;
+  margin-top: 5px;
+  width: 150px;
+  max-width: 150px;
+  height: 635px;
+  border-radius: 20px;
+  position: relative; /* add this */
+  left: -170px; /* add this */
+}
+.sideBar .logoDiv {
+  margin-bottom: 10px;
+}
+.sideBar img {
+  width: 70px;
+  height: 70px;
+}
+.sideBar .menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sideBar .menu .navItem {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sideBar .menu .navItem .navList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 1rem 1rem;
+  cursor: pointer;
+  overflow: hidden;
+  top: 0px;
+}
+.sideBar .menu .navItem .navList::after {
+  display: none;
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 0;
+  width: 3px;
+  height: 25%;
+  border-radius: 10px;
+  transition: 3s ease;
+  background: var(--paleOrange);
+}
+.sideBar .menu .navItem .navList::before {
+  display: none;
+  position: absolute;
+  content: "";
+  bottom: 50%;
+  right: 0;
+  width: 3px;
+  height: 25%;
+  border-radius: 10px;
+  transition: 3s ease;
+  background: var(--primaryColor);
+}
+.sideBar .menu .navItem .navList .icon {
+  width: 100%;
+  color: var(--paleOrange);
+  font-size: 25px;
+}
+.sideBar .menu .navItem .navList:hover::after, .sideBar .menu .navItem .navList:hover::before {
+  display: block;
+}
+.sideBar .menu .navItem .navList:hover .icon {
+  color: var(--blackColor);
+  font-size: 25px;
+}
+.sideBar .menu .navItem .navList .icon-button-container {
+  display: inline-flex; /* use inline flexbox  inline-flex*/
+  align-items: center; /* align items horizontally */
+}
+.sideBar .menu .navItem .navList .menu-list li {
+  padding: 5px 10px;
+  font-size: 10px;
+  color: #1430c1; /* blue color */
+  cursor: pointer;
+}
+.sideBar .menu .navItem .navList .menu-list li:hover {
+  background-color: #f2f2f2;
+}
+.sideBar .menu .navItem .textList {
+  font-size: small;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--primaryColor);
+  color: rgba(8, 28, 53, 0.932);
+}
+.sideBar .menu .navItem .textListe:hover {
+  color: var(--primaryColor);
+}
+
+.navList1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.navList1 .icon-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.navList1 .icon-button-container .icon {
+  width: 100%;
+  color: var(--paleOrange);
+  font-size: 25px;
+  margin-right: 10px;
+}
+.navList1 .icon-button-container .textList {
+  margin-bottom: 15px; /* adjust the value as needed */
+  border-bottom: 1px solid #ccc; /* adjust the style as needed */
+  padding-bottom: 10px; /* add some space between the border and the text */
+}
+.navList1 .icon-button-container .proposal-button {
+  border: none;
+  border-radius: 10vh;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 12vh;
+  margin-bottom: 1vh;
+  margin-top: 2vh;
+}
+.navList1 .icon-button-container .proposal-button:hover {
+  background-color: var(--whiteColor);
+}
+.navList1 .icon-button-container .proposal-button .icon-1 {
+  font-size: 12px;
+  margin-top: 5px;
+}
+.navList1 .icon-button-container .menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}</style><style type="text/css" data-vite-dev-id="C:/Users/khadh/Desktop/LoginRegistre/client/src/Components/Body Section/Top Section/top.module.css">@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root{
+    --primaryColor: hsl(221, 55%, 56%);
+    --hoverColor: hsl(26, 75%, 76%);
+    --paleOrange: hsl(24, 94%, 51%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --bgColor: hsl(113, 11%, 85%);
+    --inputColor: hsl(330, 12%, 97%);
+    --inputColor: hsl(154, 14%, 90%);
+
+    
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;  
+}
+
+._flex_71a0p_59{
+    display: flex;
+    align-items: center;
+}
+
+._grid_71a0p_69{
+    display: grid;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+html{
+    font-size: 90%;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+._icon_71a0p_103{
+    font-size: var(--h2FontSize);
+    cursor: pointer;
+}
+
+img, video{
+    height: auto;
+    width: 100%;
+}
+
+._message_71a0p_123{
+    display: none;
+}
+
+._showMessage_71a0p_131{
+    display: block;
+    color: var(--whiteColor);
+    padding: 10px;
+    background: rgba(238, 105, 10, 0.979);
+    border-radius: 3px;
+    text-align: center;
+}
+
+._showMessage_71a0p_131{
+    display: block;
+    color:var(--whiteColor) ;
+    background: rgb(247 , 114, 5);
+    border-radius: 3px;
+    text-align: center;
+}
+
+._btn_71a0p_163{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: .8rem 1rem;
+    color: var(--greyText);
+}
+
+._btn_71a0p_163 ._icon_71a0p_103{
+    margin-left: .5rem;
+}
+
+._btn_71a0p_163:hover{
+    color: var(--primaryColor);
+    background: var(--paleOrange);
+}
+
+/* 
+Styling Page */
+
+._topPage_71a0p_203{
+  height: 100vh;
+  width: 125%;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px rgb(200, 225, 215);
+  margin-left: -100px;
+}
+
+._container_71a0p_223{
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+    justify-content: space-between;
+    border-radius: 30px;
+    background: hsl(0, 0%, 100%);
+}
+
+._videoDiv_71a0p_241{
+    position: relative;
+    display: flex;
+    flex-basis: 100%;
+    width: 136%;
+    height: 100%;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+video, ._FooterDiv_71a0p_271{
+    position: absolute;
+}
+
+._video_71a0p_241{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+._textDiv_71a0p_297{
+    position: relative;
+}
+
+._title_71a0p_305{
+    color: var(--whiteColor);
+    font-size: 30px;
+    margin-top: -30vh;
+    margin-left: -55vh;
+    font-weight: 600;
+    padding: 10px;
+}
+
+._text_71a0p_297{
+    color: var(--whiteColor);
+    font-size: 15px;
+    margin-top: 10vh;
+    /* margin-left: -35vh; */
+    font-weight: 300;
+    /* display: flex;
+    flex-wrap: wrap; */
+    white-space: pre-wrap;
+    text-align: justify;
+    line-height: 1.5;
+    /* width: 5px;  */
+}
+
+._FooterDiv_71a0p_271{
+    bottom: 10px;
+    padding: 0 1rem;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.248);
+    left: 10px;
+    right: 10px;
+    justify-content: space-between;
+    backdrop-filter: blur(1px);
+    border-radius: 10px;
+}
+
+._textOne_71a0p_373{
+    color: var(--blackColor);
+}
+
+._btn_71a0p_163{
+    background: var(--paleOrange);
+    color: var(--primaryColor);
+    padding: .8rem 1.5rem;
+    border-radius: 10px;
+    margin-left: 25vh;
+    margin-top: -1vh;
+    font-weight: 400;
+    transition: .3rem ease;
+
+    &:hover{
+        color: var(--blackColor);
+        color: var(--bgColor);
+    }
+}</style><style type="text/css" data-vite-dev-id="C:/Users/khadh/Desktop/LoginRegistre/client/src/Components/Agence/Agence.module.css">@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root{
+  --primaryColor: hsl(221, 55%, 56%);
+  --hoverColor: hsl(26, 75%, 76%);
+  --paleOrange: hsl(24, 94%, 51%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 8%);
+  --bgColor: hsl(113, 11%, 85%);
+  --inputColor: hsl(330, 12%, 97%);
+  --inputColor: hsl(154, 14%, 90%);
+
+  
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: .938rem;
+  --smallFontSize: .813rem;
+  --smallestFontSize: .75rem;  
+}
+
+._flex_11fw0_57{
+  display: flex;
+  align-items: center;
+}
+
+._grid_11fw0_67{
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Fixing AgencePage */
+
+/* TILTLE H P  */
+
+._AgencePage_11fw0_87{
+  height: 130%;
+  width: 110%;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 7px 50px rgb(240, 236, 236);
+  margin-left: -130px;
+  margin-right: 90px;
+  padding: 20px;
+}
+
+._container_11fw0_111{
+  margin: 0 auto;
+  padding: 40px;
+  padding-top: -40px;
+}
+
+._textDii_11fw0_123{
+  font-size: 150%;
+  font-weight: 400;
+  text-align: left;
+  color: var(--paleOrange);
+  margin-left: -7.5vh;
+}
+
+._formGrid_11fw0_139{
+  display: flex;
+  flex-direction: column;
+}
+
+._inputContainer_11fw0_151 {
+  display: flex;
+  flex-direction: row;
+  /* padding: 20px; */
+  padding-top: 20px;
+  /* justify-content: space-between; */
+}
+
+._inputWrapper_11fw0_167{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-right: 70px;
+}
+
+._inputWrapperLabel_11fw0_181{
+  font-weight: bold;
+}
+
+._inputWrapperInput_11fw0_189{
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: -20px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+._button_11fw0_203{
+  display: flex;
+  flex-direction: column;
+  margin-left: 110vh;
+  margin-top: -10vh;
+  padding-top: -40vh;
+}
+
+._button1_11fw0_219{
+  display: flex;
+  flex-direction: column;
+  margin-left: 110vh;
+  margin-top: -10vh;
+  padding-top: -40vh;
+  margin-left: 120vh;
+}
+
+._buttonContainer1_11fw0_237{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+._buttonContainer2_11fw0_251{
+  display: flex;
+  margin-left: 15vh;
+  margin-top: 10px;
+}
+
+._btn1_11fw0_263 {
+  margin-top: 30px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #190cd2;
+  color: #fff;
+  cursor: pointer;
+}
+
+._btn2_11fw0_283 {
+  margin-top: 30px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #eb5205;
+  color: #fff;
+  cursor: pointer;
+}
+
+._btn1_11fw0_263:hover {  
+  background-color: #3136d9;
+}
+
+._btn2_11fw0_283:hover {  
+  background-color: #f69905;
+}
+
+._map_11fw0_319{
+  display: flex;
+}</style><style type="text/css" data-vite-dev-id="C:/Users/khadh/Desktop/LoginRegistre/client/src/Components/Agence/Gouvernant.module.css">._inputContainer_atygo_1 {
+  display: flex;
+  flex-direction: row;
+}
+
+._inputWrapper_atygo_11{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+._inputWrapperLabel_atygo_27{
+  font-weight: bold;
+
+}
+
+._inputWrapperInput_atygo_37{
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
+/* .inputWrapperInput{
+    font-weight: 100;
+    font-size: 17px;
+    padding: .2rem .2rem;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    background-color: white;
+  }
+
+.inputWrapperLabel{
+  font-weight: 100;
+  font-size: 17px;
+  margin-top: -10vh;
+  margin-left: 10vh;
+}   */
+
+  /* .inputWrapperInput2{
+    font-weight: 100;
+    font-size: 17px;
+    padding: .5rem 0;
+    display: block;
+    margin-left: -120vh;
+    margin-top: -8vh;
+    border-radius: 5px;
+    background-color: var(--whiteColor);
+  } */
+/* 
+  const governorates = [
+  { value: 'Ariana', label: 'Ariana', lat: 36.8667, lng: 10.1833 },
+  { value: 'Béja', label: 'Béja', lat: 36.7333, lng: 9.1833 },
+  { value: 'Ben Arous', label: 'Ben Arous', lat: 36.7333, lng: 10.2333 },
+  { value: 'Bizerte', label: 'Bizerte', lat: 37.2833, lng: 9.8667 },
+  { value: 'Gabes', label: 'Gabes', lat: 33.8833, lng: 10.0833 },
+  { value: 'Gafsa', label: 'Gafsa', lat: 34.4333, lng: 8.7833 },
+  { value: 'Jendouba', label: 'Jendouba', lat: 36.5, lng: 8.7833 },
+  { value: 'Kairouane', label: 'Kairouane', lat: 35.6667, lng: 10.0833 },
+  { value: 'Kasserine', label: 'Kasserine', lat: 35.1667, lng: 8.8333 },
+  { value: 'Kebili', label: 'Kebili', lat: 33.7, lng: 8.9667 },
+  { value: 'Manouba', label: 'Manouba', lat: 36.8, lng: 10.0833 },
+  { value: 'Kef', label: 'Kef', lat: 36.1833, lng: 8.7 },
+  { value: 'Mahdia', label: 'Mahdia', lat: 35.5, lng: 11.0667 },
+  { value: 'Mednine', label: 'Mednine', lat: 33.35, lng: 10.4667 },
+  { value: 'Monastir', label: 'Monastir', lat: 35.7833, lng: 10.8333 },
+  { value: 'Nabeul', label: 'Nabeul', lat: 36.45, lng: 10.7333 },
+  { value: 'Sfax', label: 'Sfax', lat: 34.7333, lng: 10.7667 },
+  { value: 'Sidi Bouzide', label: 'Sidi Bouzide', lat: 35.0333, lng: 9.4833 },
+  { value: 'Sousse', label: 'Sousse', lat: 35.8253, lng: 10.6383 },
+  { value: 'Tataouine', label: 'Tataouine', lat: 32.9333, lng: 10.45 },
+  { value: 'Tozeur', label: 'Tozeur', lat: 33.9167, lng: 8.1333 },
+  { value: 'Tunis', label: 'Tunis', lat: 36.8065, lng: 10.1815 },
+  { value: 'Zaghouan', label: 'Zaghouan', lat: 36.4, lng: 10.15 },
+]; */</style><style type="text/css" data-vite-dev-id="C:/Users/khadh/Desktop/LoginRegistre/client/src/Components/Inscription/Inscription.module.css">@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root{
+    --primaryColor: hsl(221, 55%, 56%);
+    --hoverColor: hsl(26, 75%, 76%);
+    --paleOrange: hsl(23, 94%, 50%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 8%);
+    --bgColor: hsl(113, 11%, 85%);
+    --inputColor: hsl(330, 12%, 97%);
+    --inputColor: hsl(154, 14%, 90%);
+
+    
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;  
+}
+
+._flex_18h82_59{
+    display: flex;
+    align-items: center;
+}
+
+._grid_18h82_69{
+    display: grid;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+html{
+    font-size: 90%;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+._icon_18h82_103{
+    font-size: var(--h2FontSize);
+    cursor: pointer;
+}
+
+img, video{
+    height: auto;
+    width: 100%;
+}
+
+._message_18h82_123{
+    display: none;
+}
+
+._showMessage_18h82_131{
+    display: block;
+    color: var(--whiteColor);
+    padding: 10px;
+    background: rgba(238, 105, 10, 0.979);
+    border-radius: 3px;
+    text-align: center;
+}
+
+._showMessage_18h82_131{
+    display: block;
+    color:var(--whiteColor) ;
+    background: rgb(247 , 114, 5);
+    border-radius: 3px;
+    text-align: center;
+}
+
+._btn_18h82_163{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: .8rem 1rem;
+    color: var(--greyText);
+}
+
+._btn_18h82_163 ._icon_18h82_103{
+    margin-left: .5rem;
+}
+
+._btn_18h82_163:hover{
+    color: var(--primaryColor);
+    background: var(--paleOrange);
+}
+
+._inscriptionPage_18h82_199 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 83%;
+    margin: 0 auto;
+    padding:  20px;
+    width: 100%;
+    transform: translateX(-120px);
+    /* width: calc(100% + 280px);  */
+  }
+
+._container_18h82_225 {
+  margin: 0 auto;
+  padding: 40px;
+  padding-top: -40px;
+}
+
+._videoDiv_18h82_237 video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 130%;
+  height: 110%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+._overplay_18h82_257{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+._title_18h82_283 {
+  font-size: 150%;
+  font-weight: 600;
+  text-align: left;
+  padding-top: 150px;
+  margin-bottom: 20px;
+}
+
+._menu_18h82_299 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+._blueBorder_18h82_313 {
+    border: 1px solid #f9fbfd; 
+    padding: 3px;
+    border-radius: 5px;
+    color: var(--whiteColor);
+}
+
+._navItem1_18h82_327 {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+._navList1_18h82_345 {
+    margin: 0 90px;
+    font-size: 35px;
+    color: #0a0a0a;
+    cursor: pointer;
+}
+
+._navList1_18h82_345 svg {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+._navList1_18h82_345 svg circle {
+    fill: #333;
+    stroke: #333;
+    stroke-width: 2;
+}
+
+._navList1_18h82_345 svg line {
+    stroke: #333;
+    stroke-width: 2;
+}
+
+._navList1_18h82_345:hover {
+    color: #666;
+}
+
+._navList1_18h82_345:hover svg circle {
+    fill: #666;
+    stroke: #666;
+}
+
+._navList1_18h82_345:hover svg line {
+    stroke: #666;
+    
+}
+
+/* Icon Styling */
+
+._navItem1_18h82_327 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #333;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+._navItem1_18h82_327 svg {
+    font-size: 24px;
+    margin: 0 auto;
+}
+
+._navItem1_18h82_327:hover {
+    background-color: #f0f0f0;
+    border-color: var(--blackColor);
+}
+
+._navItem1_18h82_327:hover svg {
+    fill: #0602f1;
+    stroke: #0b1ff7;
+}
+
+/* Form Styling,  Texting Styling  */
+
+._iconWrapper_18h82_479 {
+    display: flex;
+    align-items: center;
+  }
+
+._iconWrapper_18h82_479 > * {
+    margin-right: 10px;
+  }
+
+._form_18h82_499 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-left: 0;
+}
+
+._inputDiv2_18h82_517 {
+    flex-wrap: wrap;
+    display: flex;
+    margin-right: 20px;
+}
+
+._inputDiv1_18h82_529{
+  flex-wrap: wrap;
+  display: flex;
+  margin-right: 20px;
+}
+
+._inputDiv_18h82_517 {
+  flex-wrap: wrap;
+  display: flex;
+  margin-right: 20px;
+}
+
+._inputWrapper_18h82_553 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 0px;  
+    margin-right: 70px;  
+}
+
+._inputWrapperLabel_18h82_569 {
+    margin-right: 20px;
+    padding-right: 20px;
+    margin-left: 20vh;
+}
+
+._inputWrapperInput_18h82_581 { 
+    font-weight: 100;
+    font-size: 17px;
+    padding: .5rem 0;
+    display: block;
+    border-radius: 10px;
+    background-color: var(--whiteColor);
+}
+
+/* .inputWrapper select{
+    color: var(--blackColor);
+    font-weight: 100;
+    font-size: 17px;
+    padding: .5rem 0;
+    display: block;
+    border-radius: 20px;
+} */
+
+._inputWrapper_18h82_553 label{
+    color: var(--blackColor);
+    font-weight: 400;
+    font-size: 14px;
+    padding: .5rem 0;
+    display: block;
+}
+
+._checkbox-circle_18h82_635 {
+    transform: scale(1.7); /* Increase the size of the checkbox by 1.5 times */
+    margin-right: 10px; /* Add some space between the checkbox and the text */
+}
+
+._small-text_18h82_645{
+    font-size: 1rem;
+    font-weight: 200;
+    color: #f0f0f0;
+}
+
+/* .checkbox-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #333;
+    margin: 0 10px;
+    cursor: pointer;
+} */
+
+/* 
+<div className="textDiv">
+  <label htmlFor="">
+    <div>
+      <input
+        type="checkbox"
+        checked={isChecked[0]}
+        onChange={handleCheckboxChange(0)}
+        style={{ marginRight: 10 }} // Add some space between the checkbox and the text
+      />
+      <p style={{ display: 'inline-block' }}>J'accepte la politique de gestion des données personnelles</p>
+    </div>
+    <div>
+      <input
+        type="checkbox"
+        checked={isChecked[1]}
+        onChange={handleCheckboxChange(1)}
+        style={{ marginRight: 10 }} // Add some space between the checkbox and the text
+      />
+      <p style={{ display: 'inline-block' }}>Je ne souhaite pas l'utilisation de mes données de contact (numéro du portable, mail, adresse postale...) dans le cadre de conseil commercial ou évènementiel</p>
+    </div>
+  </label>
+</div> */
+
+/* <button className="proposal-button" onClick={handleToggleProposals}>
+        <FontAwesomeIcon icon={faArrowDown} />
+      </button> */
+
+/* const [showProposals, setShowProposals] = useState(false);
+
+const handleToggleProposals = () => {
+  setShowProposals(!showProposals);
+}; */
+
+/* .checkbox-circle input[type="checkbox"] {
+    display: none;
+} */
+
+/* .checkbox-circle input[type="checkbox"] + label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #333;
+    cursor: pointer;
+} */
+
+/* .checkbox-circle input[type="checkbox"]:checked + label {
+    background-color: var(--paleOrange)} */
+
+/* Fixing the bottom */
+
+/* .checkbox-circle-custom {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+  } */
+
+/* .checkbox-circle-custom input[type="checkbox"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  } */
+
+/* .checkbox-circle-custom::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: none;
+  } */
+
+/* .checkbox-circle-custom input[type="checkbox"]:checked::before {
+    display: block;
+    background-color: #337ab7;
+  } */
+
+/* .checkbox-circle {
+    display: flex;
+    align-items: center;
+  }
+
+
+  .checkbox-circle {
+    appearance: none;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .checkbox-circle-custom {
+    position: relative;
+    top: 2px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
+  
+  .checkbox-circle-custom::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: none;
+  }
+  
+  .checkbox-circle:checked + .checkbox-circle-custom::before {
+    display: block;
+    background-color: #337ab7;
+  }   */
+
+/* .textDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+  
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+  
+.checkbox-circle {
+    margin-right: 10px;
+}
+
+/* const [checkboxStates, setCheckboxStates] = useState([false, false]);
+
+const handleCheckboxChange = (index) => (event) => {
+  const newStates = [...checkboxStates];
+  newStates[index] = event.target.checked;
+  setCheckboxStates(newStates);
+}; */
+
+/* .videoDiv {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+  }
+  
+  .videoDiv video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; 
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1; 
+  }
+  
+  */
+
+/* Styling Page */
+
+/* Footer Styling  */
+
+/* const FooterContainer = styled.footer`
+  background-color: #007bff; /* blue color */
+
+/* padding: 20px;
+  text-align: center;
+  width: 100%; /* span the entire width of the page */
+
+/* position: absolute; /* position at the bottom of the page */
+
+/* bottom: 0;
+`; */
+
+/* import React from 'react';
+import Footer from './Footer';
+
+const App = () => {
+  return (
+    <div>
+      <Footer />
+    </div>
+  );
+}; */
+
+</style><style type="text/css" data-vite-dev-id="C:/Users/khadh/Desktop/LoginRegistre/client/src/Components/Inscription/ToggleBottom/ToggleButton.module.css">._toggleuBtton_18acs_1 {
+    position: relative;
+    display: inline-block;
+  }
+  
+  ._toggleButton_18acs_11 button {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  
+  ._toggleButton_18acs_11 button._active_18acs_27 {
+    background-color: #1308e0;
+    color: #fff;
+  }
+  
+  ._toggleButtonLabel_18acs_37 {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* .toggleButtonSlider {  
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5%;
+    height: 1%;
+    background-color: #0f0fe7;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out;
+  } */
+  
+  ._toggleButton_18acs_11 button._active_18acs_27 ._toggleButtonSlider_18acs_47 {
+    transform: translateX(100%);
+}
+._inscriptionField_18acs_75{
+  display: flex;
+  position: relative;
+}
+._inputLabel_18acs_83{
+  color: var(--whiteColor);
+  /* margin-left: 15vh; */
+  font-size: 15px;
+  display: block;
+}
+._inputWrapper_18acs_95{
+  width: 250px;
+  height: 40px;
+  border-radius: 5px;
+  /* margin-left: -25vh; */
+  padding-top: 1vh;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/khadh/Desktop/LoginRegistre/client/src/Components/Automobile/Automobile.module.css">@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root{
+    --primaryColor: hsl(221, 55%, 56%);
+    --hoverColor: hsl(26, 75%, 76%);
+    --paleOrange: hsl(23, 94%, 50%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 8%);
+    --bgColor: hsl(113, 11%, 85%);
+    --inputColor: hsl(330, 12%, 97%);
+    --inputColor: hsl(154, 14%, 90%);
+
+    
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;  
+}
+
+html{
+    font-size: 90%;
+}
+
+video{
+    height: auto;
+    width: 70%;
+}
+
+._top_nd7kk_73{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*  Page Styling */
+
+._AutomobilePage_nd7kk_87{
+    display: grid;
+    height: 70vh;
+    border: 1px solid #0000;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0 0 0 0.1);
+    border-radius: 10px; 
+}
+
+._videoDiv_nd7kk_103 video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+._container_nd7kk_121{
+    margin: 0 auto;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+/* Faixing the titles & h2 & p */
+
+._textDiv_nd7kk_133{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+._text_nd7kk_133{
+    font-size: 2.5vh;
+    color: var(--paleOrange);
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: start;
+    padding: 20px;
+    margin-left: -20vh;
+}
+
+/* Fixing icons 3 */
+
+._menu_nd7kk_163{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 40vh;
+}
+
+._navItem_nd7kk_175 {
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: -45vh;
+}
+
+._navList_nd7kk_193 {
+    margin: 0px 90px;
+    font-size: 30px;
+    color: #061e6f;
+    cursor: pointer;
+    transform: scale(1);
+    margin-bottom: 1vh;
+}
+
+._sousIcon_nd7kk_209 {
+    text-align: center; 
+    color: #020c43; 
+    font-size: 15px; 
+    margin-left: -20px;
+    margin-right: 20px; 
+    margin-top: 20; 
+  }
+
+._navL_nd7kk_193 svg {
+      font-size: 24px;
+      margin-right: 10px;
+  }
+
+/* .iconWrapper {
+    display: flex;
+    align-items: center;
+    color: rgb(2, 30, 135); 
+    margin-top: -25vh;
+    margin-left: -70vh;
+  } */
+
+/* .butn{
+  padding: 7vh;
+  margin-left: -30vh;
+  margin-top: 5vh;
+}  */
+
+._small_nd7kk_265 {
+    font-size: 15px; 
+    color: inherit; 
+    padding: 20px;
+}
+
+/* Fixing the form */
+
+._inputWra_nd7kk_277{
+    display: block;
+    margin-top: -1vh;
+    margin-bottom: 10px;
+}
+
+._inputLabel_nd7kk_287 {
+    color: var(--whiteColor);
+    /* margin-left: 15vh; */
+    font-size: 15px;
+    display: block;
+  }
+
+._inputWrapper_nd7kk_299{
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    /* margin-left: -25vh; */
+    padding-top: 1vh;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+._inputDivOne_nd7kk_319{
+    display: block;
+    margin-top: 10vh;
+    margin-bottom: 10px;
+    margin-left: 40vh;
+    margin-top: -40vh;
+}
+
+/* Fixing button suivant et précédent */
+
+._button_nd7kk_339{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+/* .buttonContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+  } */
+
+._buttonContainer_nd7kk_351 button {
+    margin-bottom: 10px;
+  }
+
+._btnPrev_nd7kk_371{
+    background-color: #030a6d; 
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+._btnNext_nd7kk_389{
+    background-color: #030a6d; 
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 43vh;
+}
+
+._btnPrev_nd7kk_371:hover, ._btnNext_nd7kk_389:hover {
+    background-color: #c55404; 
+}
+  </style><style type="text/css" data-vite-dev-id="C:/Users/khadh/Desktop/LoginRegistre/client/src/Components/Automobile/toggleButton.module.css">._toggleuBtton_16a26_1 {
+    position: relative;
+    display: inline-block;
+    /* margin-left: -40vh; */
+  }
+  
+  ._toggleButton_16a26_13 button {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  
+  ._toggleButton_16a26_13 button._active_16a26_29 {
+    background-color: #1308e0;
+    color: #fff;
+  }
+  
+  ._toggleButtonLabel_16a26_39 {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* .toggleButtonSlider {  
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5%;
+    height: 1%;
+    background-color: #0f0fe7;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out;
+  } */
+  
+  ._toggleButton_16a26_13 button._active_16a26_29 ._toggleButtonSlider_16a26_49 {
+    transform: translateX(100%);
+}
+._inscriptionField_16a26_77{
+  display: flex;
+  position: relative;
+}
+._inputLabel_16a26_85{
+  color: var(--whiteColor);
+  font-size: 15px;
+  display: block;
+  padding: 20px;
+}
+._inputWrapper_16a26_97{
+  width: 250px;
+  height: 40px;
+  border-radius: 5px;
+  margin-top: 7vh;
+  margin-left: -25vh;
+  padding: 10px 20px;
+  padding: 10px;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/khadh/Desktop/LoginRegistre/client/src/Components/Assurance Accident/Accident.module.css">@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root{
+    --primaryColor: hsl(221, 55%, 56%);
+    --hoverColor: hsl(26, 75%, 76%);
+    --paleOrange: hsl(24, 94%, 51%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 8%);
+    --bgColor: hsl(113, 11%, 85%);
+    --inputColor: hsl(330, 12%, 97%);
+    --inputColor: hsl(154, 14%, 90%);
+
+    
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;  
+}
+
+._flex_xzjpu_59{
+    display: flex;
+    align-items: center;
+}
+
+._grid_xzjpu_69{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Faixing AccidentPage */
+
+._AccidentPage_xzjpu_85{
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    height: 230vh;
+    border: 1px solid #0000;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-left: -120px;
+    margin-right: -150px;
+}
+
+._container_xzjpu_111{
+    margin: 0 auto;
+    padding: 10px;
+    padding-top: 35px;
+}
+
+/* Faixing title & h2 & p */
+
+._textDi_xzjpu_125{
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    border: 1px solid #b0acac;
+    padding: 30px;
+    box-shadow: 0 0 10 rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    /* margin-left: -1px;
+    margin-right: -1px; */
+}
+
+._textDii_xzjpu_147 {
+    color: rgb(93, 93, 240);
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+._textDiii_xzjpu_163{
+    color: black;
+    padding: 30px;
+}
+
+._btn_xzjpu_173{
+    background: var(--paleOrange);
+    color: var(--whiteColor);
+    padding: .8rem 1.5rem;
+    border-radius: 10px;
+    font-weight: 400;
+    transition: .3rem ease;
+    cursor: pointer;
+    margin-left: 100vh;
+}
+
+/* FORM STYLING */
+
+._formGrid_xzjpu_199{
+    display: flex;
+    flex-direction: column;
+    height: 180vh;
+    border: 2px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding-top: 30px;
+    border-radius: 10px;
+    margin-left: -30px;
+    margin-right: -30px;
+}
+
+._inputDii_xzjpu_225{
+    flex-wrap: wrap;
+    display: flex;
+    margin-right: 20px;
+}
+
+._inputWrapp_xzjpu_237{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 5px;
+    margin-right: 70px;
+}
+
+._inputWrappLabel_xzjpu_253{
+    margin-right: 20px;
+    padding-right: 20px;
+    margin-left: 0;
+    padding: 2px;
+    font-size: 13px;
+    font-weight: 600;
+    /* white-space: pre-wrap;
+    word-break: break-all;
+    max-width: 700px; */
+}
+
+._iW_xzjpu_277{
+    font-weight: 100;
+    font-size: 17px;
+    padding: 10px 100px;
+    display: block;
+    border-radius: 10px;
+    background-color: var(--whiteColor);
+}
+
+._icon_xzjpu_295{
+    font-size: 25px;
+    color: var(--paleOrange);
+    transition: .3rem ease;
+    transform: translateX(5px);
+    margin-right: 900px;
+    margin-top: -25px;
+}
+
+._icon1_xzjpu_313{
+    font-size: 25px;
+    color: var(--primaryColor);
+    transition: .3rem ease;
+    transform: translateX(5px);
+    margin-right: 600px;
+}
+
+._inputWrapp1_xzjpu_329{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+    margin-right: 30px;
+    padding-right: 33%;
+}
+
+/* .inputDiii{
+    margin: 20px;
+} */
+
+/* .inputWrapp{
+    display: inline-block;
+    margin-top: 40px;
+}
+
+.inputWrappLabel {
+    color: rgb(16, 15, 15);
+    font-weight: 600;
+    margin-bottom: 10px; 
+    margin-right: 90px;
+    padding-right: 20px;
+  }
+
+.iW{
+    margin-top: 30px;
+}   */
+</style><style type="text/css" data-vite-dev-id="C:/Users/khadh/Desktop/LoginRegistre/client/src/Components/Footer Section/Footer.css">/* Footer.css */
+.footerPage {
+    position: fixed; /* position the footer at the bottom of the page */
+    bottom: 0; /* stick to the bottom of the page */
+    width: 100%; /* span the entire width of the page */
+    background-color: #197de7; /* blue background color */
+    padding: 20px;
+    height: 73px; /* set the height to auto, so it only takes up the space needed */
+    border-radius: 20px;
+  }
+  
+  .container {
+    max-width: 1200px; /* adjust the max width to your liking */
+    margin: 0 auto; /* center the container */
+    padding: 20px;
+  }
+  
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .textDiv {
+    flex-basis: 100%; /* make the text div take up the full width */
+  }
+  
+  .textDiv p {
+    display: inline-block; /* display paragraphs on the same line */
+    margin-right: 10px; /* add some space between paragraphs */
+    border-right: 1px solid #ccc; /* add a separator line between paragraphs */
+    padding-right: 20px; /* add some space between the text and the separator line */
+    color: black;
+  }
+  
+  .textDiv p:last-child {
+    border-right: none; /* remove the separator line from the last paragraph */
+  }
+  
+  .textDiv p svg {
+    margin-right: 10px; /* add some space between the icon and the text */
+  }
+
+  .main-content {
+    margin-bottom: 100px; /* adjust the value to match the height of your footer */
+  }</style><style type="text/css" data-vite-dev-id="C:/Users/khadh/Desktop/LoginRegistre/client/src/Components/Multirisque Habitation/Habitation.module.css">@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root{
+    --primaryColor: hsl(221, 55%, 56%);
+    --hoverColor: hsl(26, 75%, 76%);
+    --paleOrange: hsl(24, 94%, 51%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 8%);
+    --bgColor: hsl(113, 11%, 85%);
+    --inputColor: hsl(330, 12%, 97%);
+    --inputColor: hsl(154, 14%, 90%);
+
+    
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;  
+}
+
+._flex_to38s_59{
+    display: flex;
+    align-items: center;
+}
+
+._grid_to38s_69{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+html{
+    font-size: 90%;
+}
+
+a{
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+._icon_to38s_113{
+    font-size: var(--h2FontSize);
+    cursor: pointer;
+}
+
+img, video{
+    height: auto;
+    width: 100%;
+}
+
+._message_to38s_133{
+    display: none;
+}
+
+._showMessage_to38s_141{
+    display: block;
+    color: var(--whiteColor);
+    padding: 10px;
+    background: rgba(238, 105, 10, 0.979);
+    border-radius: 3px;
+    text-align: center;
+}
+
+._showMessage_to38s_141{
+    display: block;
+    color:var(--whiteColor) ;
+    background: rgb(247 , 114, 5);
+    border-radius: 3px;
+    text-align: center;
+}
+
+._btn_to38s_173{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: .8rem 1rem;
+    color: var(--greyText);
+}
+
+._btn_to38s_173 ._icon_to38s_113{
+    margin-left: .5rem;
+}
+
+._btn_to38s_173:hover{
+    color: var(--primaryColor);
+    background: var(--paleOrange);
+}
+
+/* Fixing HabitationPage */
+
+._habitationPage_to38s_213{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+    margin-right: 100px;
+    margin-left: -90px;
+    border-radius: 10px;
+}
+
+._container_to38s_235{
+    margin: 0 auto;
+    padding: 20px;
+}
+
+._videoDiv_to38s_245 video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Faixing the titles & h2 & p */
+
+._textDiv_to38s_267{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+._textD_to38s_267{
+    font-size: 2.5vh;
+    color: var(--paleOrange);
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-left: -2vh;
+}
+
+._inputDiv_to38s_293{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+._text_to38s_267{
+    font-size: 2vh;
+    color: var(--paleOrange);
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: start;
+    padding: 20px;
+    margin-left: -2vh;
+}
+
+._inputWrapOne_to38s_321{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+/* Fixing the form */
+
+/* .inputWra{
+    display: block;
+    margin-top: -1vh;
+    margin-bottom: 10px;
+} */
+
+._inputWrappLabel_to38s_345 {
+    color: rgb(18, 7, 172);
+    font-size: 15px;
+    display: block;
+    margin-top: 10px;
+  }
+
+._iW_to38s_357{
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    padding-top: 1vh;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+._inputWrapTow_to38s_373{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-left: 40vh;
+    margin-top: -47vh;
+}
+
+._inputWrapThree_to38s_387{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-left: 85vh;
+    margin-top: -48vh;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/khadh/Desktop/LoginRegistre/client/src/Components/Gain Impot/Gain.module.css">@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root{
+    --primaryColor: hsl(221, 55%, 56%);
+    --hoverColor: hsl(26, 75%, 76%);
+    --paleOrange: hsl(24, 94%, 51%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 8%);
+    --bgColor: hsl(113, 11%, 85%);
+    --inputColor: hsl(330, 12%, 97%);
+    --inputColor: hsl(154, 14%, 90%);
+
+    
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;  
+}
+
+._flex_s6wek_59{
+    display: flex;
+    align-items: center;
+}
+
+._grid_s6wek_69{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+html{
+    font-size: 90%;
+}
+
+a{
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+._icon_s6wek_115{
+    font-size: var(--h2FontSize);
+    cursor: pointer;
+}
+
+img, video{
+    height: auto;
+    width: 100%;
+}
+
+._message_s6wek_135{
+    display: none;
+}
+
+._showMessage_s6wek_143{
+    display: block;
+    color: var(--whiteColor);
+    padding: 10px;
+    background: rgba(238, 105, 10, 0.979);
+    border-radius: 3px;
+    text-align: center;
+}
+
+._showMessage_s6wek_143{
+    display: block;
+    color:var(--whiteColor) ;
+    background: rgb(247 , 114, 5);
+    border-radius: 3px;
+    text-align: center;
+}
+
+._btn_s6wek_175{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: .8rem 1rem;
+    color: var(--greyText);
+}
+
+._btn_s6wek_175 ._icon_s6wek_115{
+    margin-left: .5rem;
+}
+
+._btn_s6wek_175:hover{
+    color: var(--primaryColor);
+    background: var(--paleOrange);
+}
+
+/* FIXING GAINPAGE */
+
+._gainPage_s6wek_215{
+    display: flex;
+    flex-direction: column;
+    height: 130vh;
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-right: 80vh;
+    margin-left: -10vh;
+}
+
+._container_s6wek_241{
+    padding: 10px;
+    margin: 10px;
+}
+
+/* FIXING TITLE */
+
+._textD_s6wek_255{
+    display: grid;
+    color: blue;
+    margin-top: 40px;
+    font-weight: 400;
+    margin-left: 45vh;
+}
+
+._textDii_s6wek_271{
+    font-size: 1.3rem;
+    color: var(--paleOrange);
+    padding: 10px;
+}
+
+._inputWrap_s6wek_283{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    width: 80%;
+    margin-right: 380px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* position: relative;
+    bottom: -100px; */
+}
+
+._inputWrappLabel_s6wek_311{
+    font-weight: 100;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: -70vh;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+
+._iW_s6wek_329{
+    font-weight: 100;
+    font-size: 18px;
+    padding: .5rem 4rem;
+    display: block;
+    border-radius: 5px;
+    background-color: var(--whiteColor);
+    margin-left: -70vh;
+}
+
+._formContainer_s6wek_349 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+._leftColumn_s6wek_359 {
+    flex-basis: 10%;
+    margin-right: 30vh;
+  }
+
+._rightColumn_s6wek_369 {
+    flex-basis: 10%;
+    margin-left: 100px;
+  }
+
+._inpuWrappL_s6wek_379{
+    margin-bottom: 20px;
+    padding-top: 10px;
+}
+
+._iWr_s6wek_389{
+    border-radius: 5px;
+    padding: .5rem 4rem;
+    margin-right: -10px;
+    margin-left: -20px;
+    margin-bottom: 10px;
+}
+
+/* .inputWrappL{
+    font-weight: 100;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 60vh;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+
+.iWra{
+    font-weight: 100;
+    font-size: 17px;
+    padding: .5rem 4rem;
+    display: block;
+    border-radius: 5px;
+    background-color: var(--whiteColor);
+    margin-left: 60vh;
+} */
+
+/* .inputWrap1{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    bottom: -40px;
+}
+
+.inputWrapp1{
+    display: flex;
+    margin-bottom: 20px;
+} */
+
+/* .inputWrappLabel1{
+    font-weight: 100;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 50vh;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+
+.iW1{
+    font-weight: 100;
+    font-size: 18px;
+    padding: .5rem 4rem;
+    display: block;
+    border-radius: 5px;
+    background-color: var(--whiteColor);
+    margin-left: -50vh;
+} */
+
+
+</style><style type="text/css" data-vite-dev-id="C:/Users/khadh/Desktop/LoginRegistre/client/src/Components/Separator Section/Separator.css">.separator-container {
+    position: absolute; /* make the container absolute */
+    top: 0; /* top edge of the container at the top of the page */
+    left: 40%; /* left edge of the container at the left of the page */
+    width: 10px; /* make the container full width */
+    height: 100%; /* make the container full height of the viewport */
+    display: flex;
+    align-items: center; /* center the line vertically */
+    
+  }
+  
+  .separator {
+    transform: rotate(90deg);
+    border: none;
+    border-left: 1px solid #ccc;
+    height: 100vh; /* make the separator full height of the container */
+    margin-left: 0; /* remove margin to make it full height */
+    padding: 70px; /* remove padding to make it full height */
+  }</style><style type="text/css" data-vite-dev-id="C:/Users/khadh/Desktop/LoginRegistre/client/src/Components/Epargne Premlum/Epargne.module.css">@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root{
+    --primaryColor: hsl(221, 55%, 56%);
+    --hoverColor: hsl(26, 75%, 76%);
+    --paleOrange: hsl(24, 94%, 51%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 8%);
+    --bgColor: hsl(113, 11%, 85%);
+    --inputColor: hsl(330, 12%, 97%);
+    --inputColor: hsl(154, 14%, 90%);
+
+    
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;  
+}
+
+._flex_15cmy_59{
+    display: flex;
+    align-items: center;
+}
+
+._grid_15cmy_69{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+html{
+    font-size: 90%;
+}
+
+a{
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+._icon_15cmy_115{
+    font-size: var(--h2FontSize);
+    cursor: pointer;
+}
+
+img, video{
+    height: auto;
+    width: 100%;
+}
+
+._message_15cmy_135{
+    display: none;
+}
+
+._showMessage_15cmy_143{
+    display: block;
+    color: var(--whiteColor);
+    padding: 10px;
+    background: rgba(238, 105, 10, 0.979);
+    border-radius: 3px;
+    text-align: center;
+}
+
+._showMessage_15cmy_143{
+    display: block;
+    color:var(--whiteColor) ;
+    background: rgb(247 , 114, 5);
+    border-radius: 3px;
+    text-align: center;
+}
+
+._btn_15cmy_175{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: .8rem 1rem;
+    color: var(--greyText);
+}
+
+._btn_15cmy_175 ._icon_15cmy_115{
+    margin-left: .5rem;
+}
+
+._btn_15cmy_175:hover{
+    color: var(--primaryColor);
+    background: var(--paleOrange);
+}
+
+/* Fixing EpaegnePage */
+
+._EpargnePage_15cmy_215{
+    display: flex;
+    flex-direction: column;
+    height: 110vh;
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-right: 500px;
+    margin-left: -90px;
+    border-radius: 10px;
+}
+
+._container_15cmy_241{
+    padding: 10px;
+    margin: 10px;
+}
+
+/* FIXING TITLE */
+
+._textDiv_15cmy_255{
+    display: grid;
+    color: blue;
+    margin-top: 40px;
+    font-weight: 400;
+}
+
+._textD_15cmy_255{
+    display: flex;
+    flex-direction: column;
+    height: 10vh;
+    width: 50%;
+    margin-left: 30%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+._textDii_15cmy_293{
+    font-size: 1.3rem;
+    color: var(--paleOrange);
+    padding: 10px;
+    margin-left: 80px;
+}
+
+/* FIXING les sous titre */
+
+._textDiii_15cmy_309{
+ display: flex;
+ margin-top: 40px;
+ margin-right: -40px;
+ font-size: 17px;
+ padding: 30px;
+}
+
+._textDd1_15cmy_325{
+    display: flex;
+    flex-direction: column;
+    height: 10vh;
+    width: 100%;
+    margin-left: -40%;
+    padding: 20px;
+}
+
+/* FIXING INOUT CHAMP */
+
+._inputWrap1_15cmy_347{
+    display: grid;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 40%;
+    margin-right: 380px;
+    margin-bottom: 10px;
+    border: 1px solid #dddd;
+    border-radius: 10px;
+}
+
+._inputWrap2_15cmy_371{
+    display: grid;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 40%;
+    margin-left: 530px;
+    margin-top: -250px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+._inputWrappLabel_15cmy_397{
+    color: black;
+    font-weight: 200;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding-right: 20px;
+    padding: 20px;
+    padding-top: 10px;
+}
+
+._iW_15cmy_417{
+    font-weight: 100;
+    font-size: 18px;
+    padding: .5rem 0;
+    display: block;
+    border-radius: 10px;
+    background-color: var(--whiteColor);
+}
+
+/* FIXING BUTTON  */
+
+._textDiii_15cmy_309 {
+    display: flex;
+    align-items: center;
+  }
+
+._texDd1_15cmy_449 {
+    margin-right: 40px;
+  }
+
+._buttonWrapper_15cmy_457 {
+    display: inline-block;
+  }
+
+._textDiiii_15cmy_467{
+    display: flex;
+    align-items: center;
+}
+
+._textDd2_15cmy_477{
+    margin-right: 40px;
+    margin-left: 30px;
+}
+
+._buttonWrapper_15cmy_457{
+    display: inline-block;
+}</style><style type="text/css" data-vite-dev-id="C:/Users/khadh/Desktop/LoginRegistre/client/src/Components/Assurance Agricole/Agricole.module.css">@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root{
+    --primaryColor: hsla(221, 72%, 50%, 0.849);
+    --hoverColor: hsl(26, 75%, 76%);
+    --paleOrange: hsl(24, 94%, 51%); 
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 8%);
+    --bgColor: hsl(113, 11%, 85%);
+    --inputColor: hsl(330, 12%, 97%);
+    --inputColor: hsl(154, 14%, 90%);
+
+    
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;  
+}
+
+._flex_ktbrx_59{
+    display: flex;
+    align-items: center;
+}
+
+._grid_ktbrx_69{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Faixing AgricolePage */
+
+._AgricolePage_ktbrx_85{
+    display: flex;
+    height: 40vh;
+    border: 1px solid #0000;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-left: -120px;
+    margin-right: -150px;
+}
+
+._container_ktbrx_107{
+    margin: 0 auto;
+    padding: 10px;
+    padding-top: 35px;
+}
+
+._sidebar_ktbrx_119{
+    width: 20%;
+    margin-left: 15vh;
+}
+
+._videoDiv_ktbrx_129 video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+/* Faixing title & h2 & p */
+
+._textDi_ktbrx_151{
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    border: 1px solid #021cad;
+    padding: 10px;
+    /* box-shadow: 0 0 10 rgba(0, 0, 0, 0.1); */
+    border-radius: 10px;
+}
+
+._textDii_ktbrx_169 {
+    color: rgb(12, 18, 173);  
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: start;
+
+}
+
+._textDiii_ktbrx_185{
+    color: rgba(3, 7, 134, 0.874);
+    padding: 30px;
+    font-weight: 600;
+}
+
+._btn_ktbrx_197{
+    background: var(--paleOrange);
+    color: var(--whiteColor);
+    padding: .8rem 1.5rem;
+    border-radius: 10px;
+    font-weight: 400;
+    transition: .3rem ease;
+    cursor: pointer;
+    margin-left: 100vh;
+}
+
+/* FORM STYLING */
+
+._formGrid_ktbrx_223{
+    display: flex;
+    flex-direction: column;
+    /* height: 30vh; */
+    width: 90%;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    box-shadow: 0 0 10px rgba(7, 10, 200, 0.949);
+    border-radius: 10px;    
+}
+
+._divText_ktbrx_245{
+    flex-wrap: wrap;
+    display: flex;
+    margin-top: -40vh;
+    /* margin-right: 0px; */
+}
+
+._inputWrapp_ktbrx_259{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 5px;
+    margin-right: 70px;
+}
+
+._inputWrappLabel_ktbrx_275{
+    margin-right: 20px;
+    padding-right: 20px;
+    margin-left: 45vh;
+    padding: 30px;
+    padding-top: 20vh;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgb(2, 17, 153);
+}
+
+._iW_ktbrx_297{
+    font-weight: 100;
+    font-size: 17px;
+    padding: 10px 40px;
+    margin-top: 30px;
+    margin-left: 40vh;
+    display: block;
+    border-radius: 10px;
+    background-color: var(--whiteColor);
+}
+
+._icon_ktbrx_319{
+    font-size: 25px;
+    color: var(--paleOrange);
+    transition: .3rem ease;
+    transform: translateX(5px);
+    margin-right: 900px;
+    margin-top: -25px;
+}
+
+._icon1_ktbrx_337{
+    font-size: 25px;
+    color: var(--primaryColor);
+    transition: .3rem ease;
+    transform: translateX(5px);
+    margin-right: 600px;
+}
+
+._inputWrapp1_ktbrx_353{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+    margin-right: 30px;
+    padding-right: 33%;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/khadh/Desktop/LoginRegistre/client/src/Components/Assurance Agricole/Agricole-grele.module.css">@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root{
+    --primaryColor: hsl(221, 55%, 56%);
+    --hoverColor: hsl(26, 75%, 76%);
+    --paleOrange: hsl(23, 94%, 50%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 8%);
+    --bgColor: hsl(113, 11%, 85%);
+    --inputColor: hsl(330, 12%, 97%);
+    --inputColor: hsl(154, 14%, 90%);
+
+    
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;  
+}
+
+._flex_e537r_59{
+    display: flex;
+    align-items: center;
+}
+
+._grid_e537r_69{
+    display: grid;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+html{
+    font-size: 90%;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+._icon_e537r_103{
+    font-size: var(--h2FontSize);
+    cursor: pointer;
+}
+
+img, video{
+    height: auto;
+    width: 100%;
+}
+
+._top_e537r_123{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+._AssuranceGrélePage_e537r_135 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 83%;
+    margin: 0 auto;
+    padding:  20px;
+    width: 80%;
+  }
+
+._container_e537r_157 {
+  margin: 0 auto;
+  padding: 40px;
+  padding-top: -40px;
+}
+
+._smallText_e537r_169{
+    font-size: 99%;
+    font-weight: 600;
+    text-align: left;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 1vh;
+    color: rgb(245, 242, 242);
+  }
+
+/* .iconWrapper{
+    display: flex;
+    align-items: center;
+    margin-left: -22vh;
+    padding-bottom: 10px;
+    margin-right: 10px;
+  }
+  .icon{
+    margin-right: 10px;
+  } */
+
+._textDii_e537r_211{
+    font-size: 90%;
+    font-weight: bold;
+    text-align: left;
+    /* padding-top: 10px; */
+    margin-bottom: 10px;
+    margin-top: -8vh;
+    margin-left: -14vh;
+    color: rgb(255, 255, 255);
+  }
+
+._inputDiv_e537r_233{
+  flex-wrap: wrap;
+  display: flex;
+  margin-left: -20vh;
+  margin-bottom: 10px;
+  /* padding: 10px; */
+}
+
+._inputDivOne_e537r_249{
+  flex-wrap: wrap;
+  display: flex;
+  /* margin-right: -10vh; */
+  margin-bottom: 30px;
+  margin-left: -11vh;
+  /* padding: 10px; */
+}
+
+._inputWrapp_e537r_267 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px; 
+}
+
+._inputWrapLabel_e537r_281 {
+  color: var(--whiteColor);
+  font-weight: bold;
+  margin-right: 20px;
+  padding-right: 20px;
+  margin-left: 30px;
+  /* padding: 10px;
+  margin-bottom: 10px; */
+  /* margin-right: 20px;
+  padding-right: 20px;
+  margin-left: -20px;
+  margin-bottom: 20px; */
+}
+
+._iW_e537r_309 { 
+  padding: 10px;
+  border-radius: 5px;
+  padding-top: 10px;
+  /* font-size: 17px;
+  padding: .5rem 0;
+  display: block;
+  border-radius: 5px;
+  background-color: var(--whiteColor); */
+}
+
+._btn_e537r_331{
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: .5rem 1rem;
+  color: var(--paleOrange);
+  margin-left: 70vh;
+}
+
+._bigTitle_e537r_351{
+  padding: .7rem;
+  background: rgba(12, 27, 93, 0.932);
+  border-radius: 10px;
+  color: white;
+  align-items: end;
+  margin: auto;
+  margin-left: -20vh;
+  margin-top: 1.5vh;
+  justify-content: center;
+  font-size: 16px;
+  width: 128%;
+  gap: .5rem;
+  transition: .3rem ease;
+}
+
+/* <ul >
+          {risquesPossibles.map((risque, index) => (
+            <li className={styles.risqueBtn} key={index}>
+              <input 
+                type="checkbox"
+                id={`risque-${index}`}  
+                name="risques"
+                value={risque}
+                onChange={handleRisqueChange}
+              />
+              <label htmlFor={`risque-${index}`}>{risque}</label>
+            </li>
+          ))}
+        </ul> */
+
+</style><style type="text/css" data-vite-dev-id="C:/Users/khadh/Desktop/LoginRegistre/client/src/Components/Assurance Agricole/Top.module.css">@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root{
+    --primaryColor: hsl(221, 55%, 56%);
+    --hoverColor: hsl(26, 75%, 76%);
+    --paleOrange: hsl(23, 94%, 50%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 8%);
+    --bgColor: hsl(113, 11%, 85%);
+    --inputColor: hsl(330, 12%, 97%);
+    --inputColor: hsl(154, 14%, 90%);
+
+    
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;  
+}
+
+._flex_1q1ho_59{
+    display: flex;
+    align-items: center;
+}
+
+._grid_1q1ho_69{
+    display: grid;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+html{
+    font-size: 90%;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+._icon_1q1ho_103{
+    font-size: var(--h2FontSize);
+    cursor: pointer;
+}
+
+img, video{
+    height: auto;
+    width: 100%;
+}
+
+._message_1q1ho_123{
+    display: none;
+}
+
+._showMessage_1q1ho_131{
+    display: block;
+    color: var(--whiteColor);
+    padding: 10px;
+    background: rgba(238, 105, 10, 0.979);
+    border-radius: 3px;
+    text-align: center;
+}
+
+._showMessage_1q1ho_131{
+    display: block;
+    color:var(--whiteColor) ;
+    background: rgb(247 , 114, 5);
+    border-radius: 3px;
+    text-align: center;
+}
+
+._btn_1q1ho_163{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: .8rem 1rem;
+    color: var(--greyText);
+}
+
+._btn_1q1ho_163 ._icon_1q1ho_103{
+    margin-left: .5rem;
+}
+
+._btn_1q1ho_163:hover{
+    color: var(--primaryColor);
+    background: var(--paleOrange);
+}
+
+._inscriptionPage_1q1ho_199 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 83%;
+    margin: 0 auto;
+    padding:  20px;
+    width: 100%;
+    transform: translateX(-120px);
+    /* width: calc(100% + 280px);  */
+  }
+
+._container_1q1ho_225 {
+  margin: 0 auto;
+  padding: 40px;
+  padding-top: -40px;
+}
+
+._videoDiv_1q1ho_237 video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 130%;
+  height:   310%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+._overplay_1q1ho_257{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+._title_1q1ho_283 {
+  font-size: 150%;
+  font-weight: 800;
+  text-align: left;
+  padding-top: 150px;
+  margin-bottom: 20px;
+}
+
+._menu_1q1ho_299 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+._blueBorder_1q1ho_313 {
+    border: 1px solid #f9fbfd; 
+    padding: 3px;
+    border-radius: 5px;
+    color: var(--whiteColor);
+}
+
+._navItem1_1q1ho_327 {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+._navList1_1q1ho_345 {
+    margin: 0 90px;
+    font-size: 35px;
+    color: #0a0a0a;
+    cursor: pointer;
+}
+
+._navList1_1q1ho_345 svg {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+._navList1_1q1ho_345 svg circle {
+    fill: #333;
+    stroke: #333;
+    stroke-width: 2;
+}
+
+._navList1_1q1ho_345 svg line {
+    stroke: #333;
+    stroke-width: 2;
+}
+
+._navList1_1q1ho_345:hover {
+    color: #666;
+}
+
+._navList1_1q1ho_345:hover svg circle {
+    fill: #666;
+    stroke: #666;
+}
+
+._navList1_1q1ho_345:hover svg line {
+    stroke: #666;
+    
+}
+
+/* TopPage */
+
+._topPage_1q1ho_421{
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40%;
+    margin: 0 auto;
+    padding: 20px;
+    width: 70%;
+    
+}
+
+._videoDiv_1q1ho_237{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 30%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+._overplay_1q1ho_257{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+
+._title_1q1ho_283 {
+    font-size: 90%;
+    font-weight: bold;
+    text-align: left;
+    padding-top: 20px;
+    margin-top: -10vh;
+    margin-bottom: 20px;
+    margin-left: -20vh;
+    color: aliceblue;
+  }
+
+/* .iconWrapper {
+    display: flex;
+    align-items: center;
+  }  */
+
+/* .smallText{
+    font-size: 70%;
+    font-weight: bold;
+    text-align: left;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 0vh;
+    color: black;
+  }
+
+  .iconWrapper{
+    display: flex;
+    align-items: center;
+    margin-left: -22vh;
+    padding-bottom: 10px;
+    margin-right: 10px;
+  }
+  .icon{
+    margin-right: 10px;
+  } */
+
+</style><style type="text/css" data-vite-dev-id="C:/Users/khadh/Desktop/LoginRegistre/client/src/Components/Assurance Agricole/Gouvernante.module.css">
+._inputContainer_1pmtl_3 {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10vh;
+  }
+  
+  ._inputWrapper_1pmtl_15{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-right: 10px;
+    padding: 10px;
+  }
+  
+  ._inputWrapperLabel_1pmtl_31{
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: aliceblue;
+  }
+  
+  ._inputWrapperInput_1pmtl_43{
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  ._inputDiv_1pmtl_53{
+    /* flex-wrap: wrap; */
+    display: flex;
+    margin-left: 100px;
+    margin-top: 7px;
+    /* margin-bottom: 10px; */
+  }
+  
+  ._inputWrapp_1pmtl_15 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px; 
+  }
+  
+  ._inputWrapLabel_1pmtl_83 {
+    font-weight: bold;
+    margin-right: 20px;
+    padding-right: 20px;
+    margin-left: 30px;
+    color: aliceblue;
+    /* padding: 10px;
+    margin-bottom: 10px; */
+    /* margin-right: 20px;
+    padding-right: 20px;
+    margin-left: -20px;
+    margin-bottom: 20px; */
+  }
+  
+  ._iW_1pmtl_111 { 
+    padding: 10px;
+    border-radius: 5px;
+    padding-top: 10px;
+    /* font-size: 17px;
+    padding: .5rem 0;
+    display: block;
+    border-radius: 5px;
+    background-color: var(--whiteColor); */
+  }
+
+
+</style><style type="text/css" data-vite-dev-id="C:/Users/khadh/Desktop/LoginRegistre/client/src/Components/Assurance Agricole/AssuranceIncendie/AgricoleIncendie.module.css">@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root{
+    --primaryColor: hsl(221, 55%, 56%);
+    --hoverColor: hsl(26, 75%, 76%);
+    --paleOrange: hsl(23, 94%, 50%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 8%);
+    --bgColor: hsl(113, 11%, 85%);
+    --inputColor: hsl(330, 12%, 97%);
+    --inputColor: hsl(154, 14%, 90%);
+
+    
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;  
+}
+
+._flex_1a625_59{
+    display: flex;
+    align-items: center;
+}
+
+._grid_1a625_69{
+    display: grid;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+html{
+    font-size: 90%;
+}
+
+/* a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+.icon{
+    font-size: var(--h2FontSize);
+    cursor: pointer;
+} */
+
+img, video{
+    height: auto;
+    width: 70%;
+}
+
+._top_1a625_127{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+._IncendiePage_1a625_137{
+  display: grid;
+  height: 70vh;
+  border: 1px solid #0000;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0 0 0 0.1);
+  border-radius: 10px;
+  margin-left: -25vh;
+}
+
+._container_1a625_157{
+  margin: 0 auto;
+  padding: 10px;
+  padding-top: 20px;
+}
+
+._videoDiv_1a625_169 video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Faixing the titles & h2 & p */
+
+._textDiv_1a625_191{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+._title_1a625_201{
+  font-size: 2.8vh;
+  color: var(--blackColor);
+  display: grid;
+  flex-wrap: wrap;
+  justify-content: start;
+  padding: 20px;
+}
+
+._sousTitle_1a625_217{
+  color: var(--blackColor);
+  font-weight: 600;
+  font-size: 2vh;
+  margin-left: 5vh;
+}
+
+._smallText_1a625_231{
+  color: var(--blackColor);
+  margin-left: 11vh;
+  margin-top: -20px;
+  font-weight: 700;
+}
+
+._textDii_1a625_245{
+  font-size: medium;
+  color: var(--paleOrange);
+  padding: 10px;
+  margin-left: 50vh;
+  margin-top: -5vh;
+}
+
+._inputDivOne_1a625_261{
+  margin-left: 37vh;
+  margin-top: -21vh;
+}
+
+._inputWrapp_1a625_271 {
+  display: grid;
+  flex-direction: column;
+  flex-wrap: wrap; 
+}
+
+._iW_1a625_283{
+  font-weight: bold;
+  margin-right: 20px;
+  margin-left: 20vh;
+  color: aliceblue;
+  border-radius: 5px;
+  height: 40px;
+  width: 200px;
+}
+
+._inputWrapLabel_1a625_303{
+  color: var(--whiteColor);
+  font-size: 15px;
+  margin-left: 20vh;
+  padding: 10px;
+}
+
+._btn_1a625_319{
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: .8rem 1rem;
+  color: var(--greyText);
+  margin-left: 20vh;
+  margin-top: 4vh;
+  &:hover{
+    background-color: var(--paleOrange);
+    color: var(--bgColor);
+  }
+}
+
+._BigTitle_1a625_349{
+  padding: .7rem;
+  background: rgba(12, 27, 93, 0.932);
+  border-radius: 10px;
+  color: white;
+  align-items: end;
+  margin: auto;
+  margin-left: 20px;
+  margin-top: 1.5vh;
+  justify-content: center;
+  font-size: 16px;
+  width: 140%;
+  gap: .5rem;
+  transition: .3rem ease;
+  width: 150%;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/khadh/Desktop/LoginRegistre/client/src/Components/Assurance Agricole/AssuranceIncendie/Gouvernanteee.module.css">
+._inputContainer_1jhqr_3 {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  ._inputWrapper_1jhqr_13{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 20vh;
+  }
+  
+  ._inputWrapperLabel_1jhqr_27{
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: aliceblue;
+  }
+  
+  ._inputWrapperInput_1jhqr_39{
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  ._inputDiv_1jhqr_49{
+    /* flex-wrap: wrap; */
+    display: flex;
+    margin-left: 100px;
+    margin-top: 7px;
+    /* margin-bottom: 10px; */
+  }
+  
+  ._inputWrapp_1jhqr_13 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px; 
+  }
+  
+  ._inputWrapLabel_1jhqr_79 {
+    font-weight: bold;
+    margin-right: 20px;
+    padding-right: 20px;
+    margin-left: 30px;
+    color: aliceblue;
+    /* padding: 10px;
+    margin-bottom: 10px; */
+    /* margin-right: 20px;
+    padding-right: 20px;
+    margin-left: -20px;
+    margin-bottom: 20px; */
+  }
+  
+  ._iW_1jhqr_107 { 
+    padding: 10px;
+    border-radius: 5px;
+    padding-top: 10px;
+    /* font-size: 17px;
+    padding: .5rem 0;
+    display: block;
+    border-radius: 5px;
+    background-color: var(--whiteColor); */
+  }
+
+
+</style><style type="text/css" data-vite-dev-id="C:/Users/khadh/Desktop/LoginRegistre/client/src/Components/Assurance Agricole/AssuranceSerre/Serre.module.css">@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root{
+    --primaryColor: hsl(221, 55%, 56%);
+    --hoverColor: hsl(26, 75%, 76%);
+    --paleOrange: hsl(23, 94%, 50%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 8%);
+    --bgColor: hsl(113, 11%, 85%);
+    --inputColor: hsl(330, 12%, 97%);
+    --inputColor: hsl(154, 14%, 90%);
+
+    
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;  
+}
+
+._flex_1c9xd_59{
+    display: flex;
+    align-items: center;
+}
+
+._grid_1c9xd_69{
+    display: grid;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+html{
+    font-size: 90%;
+}
+
+img, video{
+    height: auto;
+    width: 70%;
+}
+
+._top_1c9xd_103{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+._SerrePage_1c9xd_115{
+    display: grid;
+    height: 70vh;
+    border: 1px solid #0000;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0 0 0 0.1);
+    border-radius: 10px;
+    margin-left: -25vh;
+}
+
+._container_1c9xd_135{
+    margin: 0 auto;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+._videoDiv_1c9xd_147 video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Faixing the titles & h2 & p */
+
+._textDiv_1c9xd_169{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+._title_1c9xd_181{
+    font-size: 2.8vh;
+    color: var(--paleOrange);
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: start;
+    padding: 10px;
+}
+
+._iconWrapper_1c9xd_199{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+._smallText_1c9xd_211{
+    font-size: medium;
+    color: var(--whiteColor);
+    padding: 10px;
+    margin-left: 10vh;
+    margin-top: -4vh;
+}
+
+._inputDiv_1c9xd_227{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+._inputWrapLabel_1c9xd_239{
+    color: var(--whiteColor);
+    margin-left: 15vh;
+    font-size: 15px;
+    padding: 10px;
+    display: block;
+}
+
+._iW_1c9xd_255{
+    /* width: 250px; */
+    width: 30vh;
+    height: 40px;
+    border-radius: 5px;
+    margin-left: 12vh;
+    padding-top: 1vh;
+}
+
+._textDi_1c9xd_169{
+    color: var(--whiteColor);
+    font-size: 15px;
+    font-weight: 400;
+    padding: 10px;
+    margin-left: 10vh;
+}
+
+._btn_1c9xd_289{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: .8rem 1rem;
+
+    color: var(--paleOrange);
+    margin-left: 60%;
+}
+
+._BigTiltle_1c9xd_311{
+    padding: .7rem;
+    background: rgba(12, 27, 93, 0.932);
+    border-radius: 10px;
+    color: white;
+    align-items: end;
+    margin-top: 1vh;
+    margin-left: 5vh;
+    font-size: 15px;
+    justify-content: center;
+    gap: .5rem;
+    transition: .3rem ease;
+    width: 185%;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/khadh/Desktop/LoginRegistre/client/src/Components/Assurance Agricole/AssuranceMortalité/Mortalité.module.css">@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root{
+    --primaryColor: hsl(221, 55%, 56%);
+    --hoverColor: hsl(26, 75%, 76%);
+    --paleOrange: hsl(23, 94%, 50%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 8%);
+    --bgColor: hsl(113, 11%, 85%);
+    --inputColor: hsl(330, 12%, 97%);
+    --inputColor: hsl(154, 14%, 90%);
+
+    
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;  
+}
+
+._flex_1hqlv_59{
+    display: flex;
+    align-items: center;
+}
+
+._grid_1hqlv_69{
+    display: grid;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+html{
+    font-size: 90%;
+}
+
+img, video{
+    height: auto;
+    width: 70%;
+}
+
+._top_1hqlv_103{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+._MortalitePage_1hqlv_115{
+    display: grid;
+    height: 70vh;
+    border: 1px solid #0000;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0 0 0 0.1);
+    border-radius: 10px;
+    margin-left: -25vh;
+}
+
+._container_1hqlv_135{
+    margin: 0 auto;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+._videoDiv_1hqlv_147 video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Faixing the titles & h2 & p */
+
+._textDiv_1hqlv_169{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+._title_1hqlv_181{
+    font-size: 2vh;
+    color: var(--whiteColor);
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: start;
+    padding: 10px;
+}
+
+._smallText_1hqlv_197{
+    font-size: 1.8vh;
+    color: var(--whiteColor);
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-left: 11vh;
+    margin-top: -3.8vh;
+    padding: 10px;
+}
+
+._Inscription_1hqlv_219{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+._text_1hqlv_169{
+    font-size: 15px;
+    color: var(--bgColor);
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -9vh;
+    margin-left: 10vh;
+    justify-content: start;
+    padding: 10px;
+}
+
+._inputDiv_1hqlv_249{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+._InputWrapper_1hqlv_259{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+._inputWrapLabel_1hqlv_271{
+    color: var(--whiteColor);
+    margin-left: 20vh;
+    align-items: center;
+    font-size: 15px;
+    padding: 10px;
+    display: block;
+}
+
+._iW_1hqlv_289{
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    margin-left: 18vh;
+    padding-top: 1vh;
+    padding: 10px 20px;
+    /* margin-top: 20px; */
+}
+
+._textDi_1hqlv_169{
+    color: var(--whiteColor);
+    font-size: 20px;
+    font-weight: 400;
+    padding: 10px;
+}
+
+._btn_1hqlv_323{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: .8rem 1rem;
+    color: var(--paleOrange);
+    margin-left: 25%;
+    margin-top: 20px;
+}
+
+._BigTitle_1hqlv_345{
+    padding: .7rem;
+    background: rgba(12, 27, 93, 0.932);
+    border-radius: 10px;
+    color: white;
+    align-items: end;
+    margin-top: 1vh;
+    margin-left: 5vh;
+    font-size: 15px;
+    justify-content: center;
+    gap: .5rem;
+    transition: .3rem ease;
+    width: 323%;
+    height: 65%;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/khadh/Desktop/LoginRegistre/client/src/Components/Assurance Agricole/Responsabilité Civile Agriculteur/Responsabilité.module.css">@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root{
+    --primaryColor: hsl(221, 55%, 56%);
+    --hoverColor: hsl(26, 75%, 76%);
+    --paleOrange: hsl(23, 94%, 50%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 8%);
+    --bgColor: hsl(113, 11%, 85%);
+    --inputColor: hsl(330, 12%, 97%);
+    --inputColor: hsl(154, 14%, 90%);
+
+    
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;  
+}
+
+._flex_n2ccg_59{
+    display: flex;
+    align-items: center;
+}
+
+._grid_n2ccg_69{
+    display: grid;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+html{
+    font-size: 90%;
+}
+
+img, video{
+    height: auto;
+    width: 70%;
+}
+
+._top_n2ccg_103{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+._MortalitePage_n2ccg_115{
+    display: grid;
+    height: 70vh;
+    border: 1px solid #0000;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0 0 0 0.1);
+    border-radius: 10px;
+    margin-left: -25vh;
+}
+
+._container_n2ccg_135{
+    margin: 0 auto;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+._videoDiv_n2ccg_147 video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Faixing the titles & h2 & p */
+
+._textDiv_n2ccg_169{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+._title_n2ccg_181{
+    font-size: 2vh;
+    color: var(--blackColor);
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: start;
+    padding: 10px;
+    margin-left: -15vh;
+}
+
+._smallText_n2ccg_199{
+    font-size: 1.8vh;
+    color: var(--whiteColor);
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-left: 11vh;
+    margin-top: -3.8vh;
+    padding: 10px;
+}
+
+._Inscription_n2ccg_221{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+._text_n2ccg_169{
+    font-size: 15px;
+    color: var(--whiteColor);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    padding: 10px;
+}
+
+._inputDiv_n2ccg_247{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+._inputWrapper_n2ccg_257{
+    display: block;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+._inputLabel_n2ccg_267{
+    color: var(--blackColor);
+    margin-left: 15vh;
+    font-size: 15px;
+    padding: 10px;
+    display: block;
+}
+
+._iW_n2ccg_283{
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    margin-left: 15vh;
+    padding-top: 1vh;
+
+}
+
+._textDi_n2ccg_169{
+    color: var(--whiteColor);
+    font-size: 20px;
+    font-weight: 400;
+    padding: 10px;
+}
+
+._btn_n2ccg_315{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: .8rem 1rem;
+    color: var(--paleOrange);
+    margin-left: 8%;
+    margin-top: 10px;
+}
+
+._BigTitle_n2ccg_337{
+    padding: .7rem;
+    background: rgba(12, 27, 93, 0.932);
+    border-radius: 10px;
+    color: white;
+    align-items: end;
+    margin-top: 1vh;
+    margin-left: -20vh;
+    font-size: 15px;
+    justify-content: center;
+    gap: .5rem;
+    transition: .3rem ease;
+    width: 132%;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/khadh/Desktop/LoginRegistre/client/src/Components/Assurance Agricole/Assurance multirisques apicoles/Apicoles.module.css">@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root{
+    --primaryColor: hsl(221, 55%, 56%);
+    --hoverColor: hsl(26, 75%, 76%);
+    --paleOrange: hsl(23, 94%, 50%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 8%);
+    --bgColor: hsl(113, 11%, 85%);
+    --inputColor: hsl(330, 12%, 97%);
+    --inputColor: hsl(154, 14%, 90%);
+
+    
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;  
+}
+
+._flex_1cugq_59{
+    display: flex;
+    align-items: center;
+}
+
+._grid_1cugq_69{
+    display: grid;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+html{
+    font-size: 90%;
+}
+
+img, video{
+    height: auto;
+    width: 70%;
+}
+
+._top_1cugq_103{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+._ApicolesPage_1cugq_115{
+    display: grid;
+    height: 70vh;
+    border: 1px solid #0000;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0 0 0 0.1);
+    border-radius: 10px; 
+    margin-left: -25vh;
+}
+
+._container_1cugq_135{
+    margin: 0 auto;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+._videoDiv_1cugq_147 video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Faixing the titles & h2 & p */
+
+._textDiv_1cugq_169{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+._title_1cugq_181{
+    font-size: 2vh;
+    color: var(--whiteColor);
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: start;
+    padding: 10px;
+    margin-left: 10vh;
+}
+
+/* .title1{
+    font-size: 2vh;
+    color: var(--paleOrange);
+    display: grid;  
+    flex-wrap: wrap;
+    justify-content: start;
+    padding: 10px;
+    margin-left: 30vh;
+} */
+
+._smallText_1cugq_221{
+    font-size: 1.8vh;
+    color: var(--whiteColor);
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-left: 11vh;
+    margin-top: -3.8vh;
+    padding: 10px;
+}
+
+._text_1cugq_169{
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--paleOrange);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    margin-top: -5vh;
+}
+
+._inputDiv_1cugq_263{
+    display: grid;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+._inputWrapper_1cugq_275{
+    display: grid;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-left: 24vh;
+}
+
+._inputLabel_1cugq_291{
+    color: var(--whiteColor);
+    font-size: 15px;
+    display: block;
+    margin-left: 5vh;
+}
+
+._iW_1cugq_305{
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    padding-top: 1vh;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+
+._textDi_1cugq_169{
+    color: var(--whiteColor);
+    font-size: 20px;
+    font-weight: 400;
+    padding: 10px;
+}
+
+._btn_1cugq_337{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: .8rem 1rem;
+    color: var(--paleOrange);
+    margin-left: 23%;
+    margin-top: 2vh;
+}
+
+._BigTitle_1cugq_359{
+    padding: .3rem;
+    background: rgba(12, 27, 93, 0.932);
+    border-radius: 10px;
+    color: white;
+    align-items: end;
+    margin-top: 1vh;
+    margin-left: 20px;
+    font-size: 15px;
+    justify-content: center;
+    gap: .5rem;
+    transition: .3rem ease;
+    width: 230%;
+    height: 5vh;
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/khadh/Desktop/LoginRegistre/client/src/Components/Assurance Agricole/Chambres Frigorifiques/chambre.module.css">@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root{
+    --primaryColor: hsl(221, 55%, 56%);
+    --hoverColor: hsl(26, 75%, 76%);
+    --paleOrange: hsl(23, 94%, 50%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 8%);
+    --bgColor: hsl(113, 11%, 85%);
+    --inputColor: hsl(330, 12%, 97%);
+    --inputColor: hsl(154, 14%, 90%);
+
+    
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;  
+}
+
+._flex_17ajq_59{
+    display: flex;
+    align-items: center;
+}
+
+._grid_17ajq_69{
+    display: grid;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+html{
+    font-size: 90%;
+}
+
+img, video{
+    height: auto;
+    width: 70%;
+}
+
+._top_17ajq_103{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+._ChambrePage_17ajq_115{
+    display: grid;
+    height: 70vh;
+    border: 1px solid #0000;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0 0 0 0.1);
+    border-radius: 10px; 
+    margin-left: -25vh;
+}
+
+._container_17ajq_135{
+    margin: 0 auto;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+._videoDiv_17ajq_147 video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Faixing the titles & h2 & p */
+
+._BigTitle_17ajq_169{
+    padding: .3rem;
+    background: rgba(12, 27, 93, 0.932);
+    border-radius: 10px;
+    color: white;
+    align-items: end;
+    margin-top: 1px;
+    margin-left: 20px;
+    font-size: 15px;
+    justify-content: center;
+    gap: .5rem;
+    transition: .3rem ease;
+    width: 180vh;
+    height: 115%;
+}
+
+._textDiv_17ajq_201{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+._title_17ajq_213{
+    font-size: 4vh;
+    color: var(--paleOrange);
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    margin-left: 10vh;
+}
+
+._text_17ajq_201{
+    font-size: 2vh;
+    color: var(--whiteColor);
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: start;
+    padding: 10px;
+    margin-left: 10vh;
+}
+
+._textD_17ajq_201{
+    font-size: 2vh;
+    color: var(--paleOrange);
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: start;
+    padding: 5px;
+    margin-left: 10vh;
+}
+
+._textDi_17ajq_201{
+    font-size: 3vh;
+    color: var(--paleOrange);
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5px;
+    margin-left: 10vh;
+    padding: 10px;
+}
+
+._InputWrapper_17ajq_293{
+    display: grid;
+    flex-direction: column;
+    flex-wrap: wrap;    
+}
+
+._inputLabel_17ajq_305{
+    color: var(--whiteColor);
+    font-size: 15px;
+    display: block;
+}
+
+._iW_17ajq_317{
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    /* margin-left: 8vh; */
+    padding-top: 1vh;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+
+._btn_17ajq_337{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: .8rem 1rem;
+    color: var(--paleOrange);
+    margin-left: 30%;
+    margin-top: 0vh;
+}</style><style type="text/css" data-vite-dev-id="C:/Users/khadh/Desktop/LoginRegistre/client/src/Components/Assurance Agricole/Corps Navire Pêche/Peche.module.css">@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root{
+    --primaryColor: hsl(221, 55%, 56%);
+    --hoverColor: hsl(26, 75%, 76%);
+    --paleOrange: hsl(23, 94%, 50%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 8%);
+    --bgColor: hsl(113, 11%, 85%);
+    --inputColor: hsl(330, 12%, 97%);
+    --inputColor: hsl(154, 14%, 90%);
+
+    
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;  
+}
+
+._flex_1cort_59{
+    display: flex;
+    align-items: center;
+}
+
+._grid_1cort_69{
+    display: grid;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+html{
+    font-size: 90%;
+}
+
+img, video{
+    height: auto;
+    width: 70%;
+}
+
+._top_1cort_103{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+._PechePage_1cort_115{
+    display: grid;
+    height: 70vh;
+    border: 1px solid #0000;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0 0 0 0.1);
+    border-radius: 10px; 
+}
+
+._container_1cort_133{
+    margin: 0 auto;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+._videoDiv_1cort_145 video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+._BigTitle_1cort_165{
+    padding: .3rem;
+    background: rgba(12, 27, 93, 0.932);
+    border-radius: 10px;
+    color: white;
+    align-items: end;
+    margin-top: 1vh;
+    margin-left: -20vh;
+    font-size: 15px;
+    justify-content: center;
+    gap: .5rem;
+    transition: .3rem ease;
+    width: 128%;
+    height: 6vh;
+}
+
+/* Faixing the titles & h2 & p */
+
+._textDiv_1cort_199{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+._title_1cort_209{
+    font-size: 2.5vh;
+    color: var(--paleOrange);
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: start;
+    padding: 20px;
+    margin-left: -20vh;
+}
+
+._title1_1cort_227{
+    font-size: 2.5vh;
+    color: var(--paleOrange);
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    /* margin-left: -20vh; */
+}
+
+._text_1cort_199{
+    font-size: 2vh;
+    color: var(--whiteColor);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    padding: 10px;
+    margin-left: -20vh;
+}
+
+._smallText_1cort_265{
+    font-size: 1.8vh;
+    color: var(--whiteColor);
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-left: 3vh;
+    margin-top: -3.8vh;
+    padding: 10px;
+}
+
+._inputDiv_1cort_287{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+._textD_1cort_199{
+    font-size: 2.5vh;
+    color: var(--paleOrange);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    /* padding: 10px; */
+    margin-left: 50vh;
+}
+
+._InputWrapper_1cort_317{
+    /* display: flex; */
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px;
+    display: block;
+}
+
+._inputLabel_1cort_331{
+    color: var(--whiteColor);
+    margin-left: 15vh;
+    font-size: 15px;
+    display: block;
+}
+
+._iW_1cort_345{
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 10vh;
+    padding-top: 1vh;
+    padding: 10px 20px;
+    margin-top: 10px;
+}</style><style type="text/css" data-vite-dev-id="C:/Users/khadh/Desktop/LoginRegistre/client/src/Components/Contact/contact.module.css">@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root{
+    --primaryColor: hsl(221, 55%, 56%);
+    --hoverColor: hsl(26, 75%, 76%);
+    --paleOrange: hsl(23, 94%, 50%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 8%);
+    --bgColor: hsl(113, 11%, 85%);
+    --inputColor: hsl(330, 12%, 97%);
+    --inputColor: hsl(154, 14%, 90%);
+
+    
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;  
+}
+
+._flex_t4tec_59{
+    display: flex;
+    align-items: center;
+}
+
+._grid_t4tec_69{
+    display: grid;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+html{
+    font-size: 90%;
+}
+
+img, video{
+    height: auto;
+    width: 70%;
+}
+
+._top_t4tec_103{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Pages Stylings */
+
+._PechePage_t4tec_117{
+    display: grid;
+    height: 70vh;
+    border: 1px solid #0000;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0 0 0 0.1);
+    border-radius: 10px; 
+}
+
+._container_t4tec_135{
+    margin: 0 auto;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+._videoDiv_t4tec_147 video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+._bigTitle_t4tec_167{
+    padding: .3rem;
+    background: rgba(12, 27, 93, 0.932);
+    border-radius: 10px;
+    color: white;
+    align-items: end;
+    margin-top: 1vh;
+    margin-left: -20vh;
+    font-size: 15px;
+    justify-content: center;
+    gap: .5rem;
+    transition: .3rem ease;
+    width: 134%;
+    height: 6vh;
+}
+
+/* Faixing the titles & h2 & p */
+
+._textDiv_t4tec_199{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+._text_t4tec_199{
+    font-size: 2.5vh;
+    color: var(--whiteColor);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+
+}
+
+._formDiv_t4tec_227{
+    display: flex;
+    flex-basis: 50%;
+    margin: auto;
+    flex-direction: column;
+    gap: 1.5rem;
+    
+}
+
+._formGrig_t4tec_245{
+    gap: 1rem;
+}
+
+._inputDiv_t4tec_251{
+    background: none;
+    outline: none;
+    border: none;
+    width: 200px;
+}
+
+._inputLabel_t4tec_263{
+    gap: .5rem;
+    /* padding: .7rem 1rem; */
+    color: var(--bgColor);
+    padding: 30px;
+    font-size: 2vh;
+    
+}
+
+._inputWrapper_t4tec_279, ._iW_t4tec_279{
+    gap: 1rem;
+    padding: .7rem 1rem;
+    background: var(--inputColor);
+    border-radius: 5vh;
+    width: 100%;
+    margin-top: 10px;
+}
+
+._inputLabe_t4tec_263{
+    color: var(--bgColor);
+    padding: 30px;
+    font-size: 2vh;
+}
+
+._inW_t4tec_309{
+    gap: 1rem;
+    padding: .7rem 1rem;
+    background: var(--bgColor);
+    border-radius: 5px;
+    width: 250%;
+    margin-top: 10px;
+}
+
+._formDi_t4tec_227{
+    display: flex;
+    flex-basis: 50%;
+    margin: auto;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-left: 40vh;
+    margin-top: -69vh;
+}
+
+._inputMessage_t4tec_347{
+    display: block;
+    padding: 20px;
+}
+
+._inptLab_t4tec_357{
+    color: var(--whiteColor);
+    padding: 30px;
+    font-size: 2vh;
+}
+
+._InpW_t4tec_369{
+    /* gap: 1rem; */
+    padding: 4rem 10rem;
+    background: var(--bgColor);
+    border-radius: 5px;
+    width: 90%;
+}
+
+._btn_t4tec_385{
+    padding: .7rem;
+    background: var(--paleOrange);
+    border-radius: 10px;
+    color: var(--whiteColor);
+    align-items: end;
+    margin: auto;
+    justify-content: center;
+    font-size: 16px;
+    margin-left: 100vh;
+    /* width: 40%; */
+    /* gap: .5rem; */
+    /* transition: .3rem ease; */
+}
+
+
+
+</style><style type="text/css" data-vite-dev-id="C:/Users/khadh/Desktop/LoginRegistre/client/src/Components/Multirisque Habitation/ToggleButton/toggleButon.module.css">._toggleuBtton_16a26_1 {
+    position: relative;
+    display: inline-block;
+    /* margin-left: -40vh; */
+  }
+  
+  ._toggleButton_16a26_13 button {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  
+  ._toggleButton_16a26_13 button._active_16a26_29 {
+    background-color: #1308e0;
+    color: #fff;
+  }
+  
+  ._toggleButtonLabel_16a26_39 {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* .toggleButtonSlider {  
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5%;
+    height: 1%;
+    background-color: #0f0fe7;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out;
+  } */
+  
+  ._toggleButton_16a26_13 button._active_16a26_29 ._toggleButtonSlider_16a26_49 {
+    transform: translateX(100%);
+}
+._inscriptionField_16a26_77{
+  display: flex;
+  position: relative;
+}
+._inputLabel_16a26_85{
+  color: var(--whiteColor);
+  font-size: 15px;
+  display: block;
+  padding: 20px;
+}
+._inputWrapper_16a26_97{
+  width: 250px;
+  height: 40px;
+  border-radius: 5px;
+  margin-top: 7vh;
+  margin-left: -25vh;
+  padding: 10px 20px;
+  padding: 10px;
+}
+</style></head>
+  <body>
+    <div id="root"><div><div class="container"><div class="sidebar"><div class="sideBar"><div class="logoDiv flex"><img src="./Ctama App_files/logo.png" alt="Logo Image"></div><div class="menu"><ul class="navItem"><li class="navList"><a href="http://localhost:5173/"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" class="icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M858.5 763.6a374 374 0 0 0-80.6-119.5 375.63 375.63 0 0 0-119.5-80.6c-.4-.2-.8-.3-1.2-.5C719.5 518 760 444.7 760 362c0-137-111-248-248-248S264 225 264 362c0 82.7 40.5 156 102.8 201.1-.4.2-.8.3-1.2.5-44.8 18.9-85 46-119.5 80.6a375.63 375.63 0 0 0-80.6 119.5A371.7 371.7 0 0 0 136 901.8a8 8 0 0 0 8 8.2h60c4.4 0 7.9-3.5 8-7.8 2-77.2 33-149.5 87.8-204.3 56.7-56.7 132-87.9 212.2-87.9s155.5 31.2 212.2 87.9C779 752.7 810 825 812 902.2c.1 4.4 3.6 7.8 8 7.8h60a8 8 0 0 0 8-8.2c-1-47.8-10.9-94.3-29.5-138.2zM512 534c-45.9 0-89.1-17.9-121.6-50.4S340 407.9 340 362c0-45.9 17.9-89.1 50.4-121.6S466.1 190 512 190s89.1 17.9 121.6 50.4S684 316.1 684 362c0 45.9-17.9 89.1-50.4 121.6S557.9 534 512 534z"></path></svg><span class="textList">Login</span></a></li><li class="navList1"><div class="icon-button-container"><button class="proposal-button"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="icon-1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"></path></svg></button><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M19 2H5c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zM5 20V4h14l.001 16H5z"></path><path d="M7 12h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zM7 6h10v4H7zm4 10h2v2h-2zm4-4h2v6h-2z"></path></svg><span class="textList">Devis</span></div></li><li class="navList1"><div class="icon-button-container"><button class="proposal-button"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="icon-1" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 294.1L383 167c9.4-9.4 24.6-9.4 33.9 0s9.3 24.6 0 34L273 345c-9.1 9.1-23.7 9.3-33.1.7L95 201.1c-4.7-4.7-7-10.9-7-17s2.3-12.3 7-17c9.4-9.4 24.6-9.4 33.9 0l127.1 127z"></path></svg></button><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke-width="2" d="M20,7 C21.25,8.67 22,10.75 22,13 C22,18.52 17.52,23 12,23 C6.48,23 2,18.52 2,13 C2,7.48 6.48,3 12,3 M12,1 L12,13 L21.6,5.8 C19.41,2.89 15.92,1 12,1 L12,1 Z"></path></svg><span class="textList">Simulateurs</span></div></li><li class="navList"><a href="http://localhost:5173/agence"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 2.88-2.88 7.19-5 9.88C9.92 16.21 7 11.85 7 9z"></path><circle cx="12" cy="9" r="2.5"></circle></svg><span class="textList">Agences</span></a></li><li class="navList"><a href="http://localhost:5173/habitation"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg><span class="textList">Aide en ligne</span></a></li><li class="navList"><a href="http://localhost:5173/contact"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><polyline points="16 2 16 8 22 8"></polyline><line x1="22" x2="16" y1="2" y2="8"></line><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><span class="textList">Contact nous</span></a></li></ul></div></div></div><div class="habitation"><div class="_habitationPage_to38s_213"><div class="_container_to38s_235"><div class="_videoDiv_to38s_245"><video src="/src/LoginAssets/habitation1.mp4" autoplay="" loop=""></video></div><div class="_textDiv_to38s_267"><h2 class="_textD_to38s_267">Demande de devis multirisque habitation</h2></div><div class="_inputDiv_to38s_293"><p class="_text_to38s_267">Etes vous client CTAMA * </p><div class="_toggleButton_16a26_13"><button class=""><span class="_toggleButtonLabel_16a26_39">Non</span><span class="_toggleButtonSlider_16a26_49"></span></button></div></div><div class="_inputWrapOne_to38s_321"><div><label for="" class="_inputWrappLabel_to38s_345">Nom complet*</label><input class="_iW_to38s_357" type="text" name="name" id=""></div><div><label for="" class="_inputWrappLabel_to38s_345">Type d'identifiant*</label><select class="_iW_to38s_357" name="" id=""><option value="CIN">CIN</option><option value="Passeport">Passeport</option><option value="Matricule fiscale">Matricule fiscale</option></select></div><div><label for="" class="_inputWrappLabel_to38s_345">Date de naissance*</label><input class="_iW_to38s_357" type="date" name="date" id=""></div><div><label for="" class="_inputWrappLabel_to38s_345">Code postal*</label><input class="_iW_to38s_357" type="text" name="code postal" id=""></div></div><div class="_inputWrapTow_to38s_373"><div><label for="" class="_inputWrappLabel_to38s_345">Identifiant*</label><input class="_iW_to38s_357" type="text" name="identifiant" id=""></div><div><label for="" class="_inputWrappLabel_to38s_345">Téléphone*</label><input class="_iW_to38s_357" type="text" name="téléphone" id=""></div><div><label for="" class="_inputWrappLabel_to38s_345">Email*</label><input class="_iW_to38s_357" type="email" name="email" id=""></div><p>Vous étes:</p><div><button class="_btn_to38s_173">Occupant</button><button class="_btn_to38s_173">Non occupant</button></div></div><div class="_inputWrapThree_to38s_387"><div><div><label for="" class="_inputWrappLabel_to38s_345">Nombre de piéces du bien immobilier:</label><input class="_iW_to38s_357" type="number"></div><div><label for="" class="_inputWrappLabel_to38s_345">Montant Mobilier:</label><input class="_iW_to38s_357" type="number"></div><div><label for="" class="_inputWrappLabel_to38s_345">Montant immobilier:</label><input class="_iW_to38s_357" type="number"></div><div><label for="" class="_inputWrappLabel_to38s_345">Type de couverture:</label><button class="_btn_to38s_173">Basique</button><button class="_btn_to38s_173">Confort</button></div></div></div></div></div></div></div></div></div>
+    <script type="module" src="./Ctama App_files/main.jsx"></script>
+  
+
+</body></html>

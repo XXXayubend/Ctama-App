@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+:root{
+  --primaryColor: hsl(221, 55%, 56%);
+  --hoverColor: hsl(26, 75%, 76%);
+  --paleOrange: hsl(24, 94%, 51%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 8%);
+  --bgColor: hsl(113, 11%, 85%);
+  --inputColor: hsl(330, 12%, 97%);
+  --inputColor: hsl(154, 14%, 90%);
+
+  
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: .938rem;
+  --smallFontSize: .813rem;
+  --smallestFontSize: .75rem;  
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+}²
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Fixing AgencePage */
+/* TILTLE H P  */
+
+.AgencePage{
+  height: 550%;
+  width: 100%;
+  margin: auto;
+  border-radius: 10px;
+  /* overflow: hidden; */
+  box-shadow: 0 1vh 0 rgb(240, 236, 236);
+  padding: 20px;
+  margin-top: -50vh;
+}
+
+.container{
+  margin: 0 auto;
+  padding: 40px;
+}
+.sidebar{
+  margin-left: 14vh;
+  margin-top: 43vh;
+}
+
+.text{
+  /* font-size: 150%; */
+  font-weight: 400;
+  text-align: left;
+  color: var(--paleOrange);
+  margin-left: 20vh;
+  margin-top: -90vh;
+}
+
+.formGrid{
+  display: flex;
+  flex-direction: column;
+  margin-left: 30vh;
+}
+
+
+.inputContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: -1vh;
+  /* padding: 20px; */
+  /* padding-top: 20px; */
+  /* justify-content: space-between; */
+}
+
+.inputWrapper{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 10vh;
+}
+
+.inputWrapperLabel{
+  font-weight: bold;
+}
+
+.inputWrapperInput{
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: -20px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.button{
+  display: flex;
+  flex-direction: column;
+  margin-left: 110vh;
+  margin-top: -10vh;
+  padding-top: -40vh;
+}
+
+.button1{
+  display: flex;
+  flex-direction: column;
+  margin-left: 110vh;
+  margin-top: -10vh;
+  padding-top: -40vh;
+  margin-left: 120vh;
+}
+
+.buttonContainer1{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+.buttonContainer2{
+  display: flex;
+  margin-left: 15vh;
+  margin-top: 10px;
+}
+
+.btn1 {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-left: -7vh;
+  background-color: rgba(12, 27, 93, 0.932);
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn2 {
+  margin-top: 27px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-left: -8vh;
+  background-color: #eb5205;
+  color: #fff;
+  cursor: pointer;
+}
+  
+.btn1:hover {  
+  background-color: #3136d9;
+}
+
+.btn2:hover {  
+  background-color: #f69905;
+}
+
+.map{
+  display: flex;
+  margin-left: 1vh;
+  margin-top: 1vh;
+}
+

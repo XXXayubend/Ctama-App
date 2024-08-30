@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root{
+    --primaryColor: hsl(221, 55%, 56%);
+    --hoverColor: hsl(26, 75%, 76%);
+    --paleOrange: hsl(23, 94%, 50%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 8%);
+    --bgColor: hsl(113, 11%, 85%);
+    --inputColor: hsl(330, 12%, 97%);
+    --inputColor: hsl(154, 14%, 90%);
+
+    
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;  
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.grid{
+    display: grid;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+html{
+    font-size: 90%;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+.icon{
+    font-size: var(--h2FontSize);
+    cursor: pointer;
+}
+
+img, video{
+    height: auto;
+    width: 100%;
+}
+
+.top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.AssuranceGrélePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 83%;
+    margin-left: 25vh;
+    margin-top: 10vh;
+    padding: 20px;
+    width: 50%;
+  }
+
+.container {
+  margin: 0 auto;
+  padding: 40px;
+  padding-top: 40px;
+} 
+
+.smallText{
+    font-size: 99%;
+    font-weight: 600;
+    text-align: left;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 1vh;
+    color: rgb(245, 242, 242);
+  }
+
+  .textDii{
+    font-size: 90%;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-left: -14vh;
+    color: rgb(255, 255, 255);
+  }
+
+.inputDiv{
+  flex-wrap: wrap;
+  display: flex;
+  margin-left: -20vh;
+  /* margin-top: 10vh; */
+  margin-bottom: 10px;
+}
+
+.inputDivOne{
+  flex-wrap: wrap;
+  display: flex;
+  /* margin-right: -10vh; */
+  margin-bottom: 30px;
+  margin-left: -11vh;
+  /* padding: 10px; */
+}
+
+.inputWrapp {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px; 
+}
+
+.inputWrapLabel {
+  color: var(--whiteColor);
+  font-weight: bold;
+  margin-right: 20px;
+  padding-right: 20px;
+  margin-left: 30px;
+  /* padding: 10px;
+  margin-bottom: 10px; */
+  /* margin-right: 20px;
+  padding-right: 20px;
+  margin-left: -20px;
+  margin-bottom: 20px; */
+}
+
+.iW { 
+  padding: 10px;
+  border-radius: 5px;
+  padding-top: 10px;
+  /* font-size: 17px;
+  padding: .5rem 0;
+  display: block;
+  border-radius: 5px;
+  background-color: var(--whiteColor); */
+}
+
+.btn{
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: .5rem 1rem;
+  color: var(--paleOrange);
+  margin-left: 70vh;
+}
+
+.bigTitle{
+  padding: .7rem;
+  background: rgba(12, 27, 93, 0.932);
+  border-radius: 10px;
+  color: white;
+  align-items: end;
+  margin: auto;
+  margin-left: -20vh;
+  margin-top: 15vh;
+  justify-content: center;
+  font-size: 16px;
+  width: 128%;
+  gap: .5rem;
+  transition: .3rem ease;
+}
+

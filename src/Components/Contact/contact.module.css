@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root{
+    --primaryColor: hsl(221, 55%, 56%);
+    --hoverColor: hsl(26, 75%, 76%);
+    --paleOrange: hsl(23, 94%, 50%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 8%);
+    --bgColor: hsl(113, 11%, 85%);
+    --inputColor: hsl(330, 12%, 97%);
+    --inputColor: hsl(154, 14%, 90%);
+
+    
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;  
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.grid{
+    display: grid;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+html{
+    font-size: 90%;
+}
+
+img, video{
+    height: auto;
+    width: 70%;
+}
+
+
+
+.top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Pages Stylings */
+.ContactPage{
+    display: grid;
+    height: 70%;
+    width: 70%;
+    border: 1px solid #0000;
+    margin-top: 80vh;
+    margin-left: 30vh;
+    box-shadow: 0 0 10px rgba(0 0 0 0.1);
+    border-radius: 10px; 
+}
+
+.container{
+    margin: 0 auto;
+    padding: 10px;
+    padding-top: 20px;
+} 
+
+.videoDiv video{
+    position: absolute;
+    top: 2vh;
+    left: 0;
+    width: 87%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    margin-left: 22vh;
+} 
+.sidebare{
+    margin-left: -11.5vh;
+    margin-top: -111vh;
+}
+
+.bigTitle{
+    padding: .8rem;
+    background: rgba(12, 27, 93, 0.932);
+    border-radius: 10px;
+    color: white;
+    align-items: end;
+    margin-top: -77vh;
+    margin-left: -8vh;
+    font-size: 15px;
+    justify-content: center;
+    gap: .5rem;
+    transition: .3rem ease;
+    width: 124%;
+    height: 6vh;
+}
+/* Faixing the titles & h2 & p */
+.textDiv{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: -58vh;
+    margin-left: 10vh;
+}
+.text{
+    font-size: 2.5vh;
+    color: var(--whiteColor);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    margin-top: -25vh;
+    margin-left: -20vh;
+}
+.formDiv{
+    display: flex;
+    flex-basis: 50%;
+    margin: auto;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: -18vh;
+    margin-left: 10vh;
+}
+.formGri{
+    gap: 1rem;
+    margin-top: 7.5vh;
+    margin-left: 10vh;
+}
+.inputDiv{
+    background: none;
+    outline: none;
+    border: none;
+    width: 200px;
+}
+.inputLabel{
+    gap: .5rem;
+    /* padding: .7rem 1rem; */
+    /* color: var(--primaryColor); */
+    padding: 10px;
+    font-size: 2vh;
+    font-weight: bold;
+    color: rgba(12, 27, 93, 0.932);
+    
+}
+.inputWrapper, .iW{
+    gap: 1rem;
+    padding: .7rem 1rem;
+    background: var(--inputColor);
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.inputLabe{
+    /* color: var(--primaryColor); */
+    color: rgba(12, 27, 93, 0.932); 
+    padding: 30px;
+    font-size: 2vh;
+    font-weight: bold;
+}
+
+/* .inputLab{
+    color: var(--primaryColor);
+    padding: 30px;
+    font-size: 2vh;
+    font-weight: bold;
+} */
+
+.inW{
+    gap: 1rem;
+    padding: .7rem 1rem;
+    background: var(--bgColor);
+    border-radius: 5px;
+    width: 250%;
+    margin-top: 10px;
+}
+
+.formDi{
+    display: flex;
+    flex-basis: 50%;
+    margin: auto;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-left: 40vh;
+    margin-top: -69vh;
+}
+
+.inputMessage{
+    display: block;
+    padding: 20px;
+}
+
+.inputLab{
+    /* color: var(--whiteColor); */
+    padding: 30px;
+    font-size: 2vh;
+    font-weight: bold;
+    color: rgba(12, 27, 93, 0.932); 
+}
+
+.InpW{
+    padding: 3rem 10rem;
+    background: var(--bgColor);
+    border-radius: 5px;
+    width: 90%;
+    margin-left: -21vh;
+}
+
+.btn{
+    padding: .7rem;
+    /* color: rgba(12, 27, 93, 0.932);  */
+    background: rgba(12, 27, 93, 0.932);
+    border-radius: 10px;
+    color: var(--whiteColor);
+    align-items: end;
+    margin: auto;
+    justify-content: center;
+    font-size: 16px;
+    margin-left: 120vh;
+    cursor: pointer;
+    /* width: 40%; */
+    /* gap: .5rem; */
+    /* transition: .3rem ease; */
+}
+
+
+

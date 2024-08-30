@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root{
+    --primaryColor: hsl(221, 55%, 56%);
+    --hoverColor: hsl(26, 75%, 76%);
+    --paleOrange: hsl(23, 94%, 50%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 8%);
+    --bgColor: hsl(113, 11%, 85%);
+    --inputColor: hsl(330, 12%, 97%);
+    --inputColor: hsl(154, 14%, 90%);
+
+    
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;  
+}
+html{
+    font-size: 90%;
+}
+
+video{
+    height: auto;
+    width: 70%;
+}
+.top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ 
+/*  Page Styling */
+.AutomobilePage{
+    display: grid;
+    height: 70vh;
+    margin-top: -110vh;
+    margin-left: 50vh;
+    border: 1px solid #0000;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0 0 0 0.1);
+    border-radius: 10px; 
+}
+.videoDiv video{
+    position: absolute;
+    top: 2vh;
+    left: 0;
+    width: 87%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    margin-left: 25vh;
+} 
+.container{
+    margin: 0 auto;
+    padding: 10px;
+    padding-top: 20px;
+}
+ .sideba{
+    margin-top: 107vh;
+    margin-left: -31vh;
+ }
+/* Faixing the titles & h2 & p */
+.textDiv{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: -110vh;
+}   
+.text{
+    font-size: 3vh;
+    font-weight: 700;
+    color: var(--paleOrange);
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: start;
+    padding: 20px;
+    margin-left: -24vh;
+    margin-top: 20vh;
+}
+/* Fixing icons 3 */
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 40vh;
+    /* margin-top: 10vh; */
+}
+.navItem {
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: -45vh;
+}
+.navList {
+    margin: 0px 90px;
+    font-size: 30px;
+    /* color: #061e6f; */
+    color: var(--paleOrange);
+    cursor: pointer;
+    transform: scale(1);
+    margin-bottom: 1vh;
+}
+.separator{
+    position: absolute;
+    margin-top: 11.5vh;
+    color: var(--paleOrange);
+    margin-left: 9vh;
+}
+.separatore{
+    position: absolute;
+    margin-top: 11.5vh;
+    color: var(--paleOrange);
+    margin-left: 11vh;
+}
+.sousIcon {
+    text-align: center; 
+    color: var(--paleOrange);
+    /* color: #020c43;  */
+    font-size: 15px; 
+    font-weight: bold;
+    margin-left: -20px;
+    margin-right: 20px; 
+    margin-top: 20; 
+  }
+  
+  .navL svg {
+      font-size: 24px;
+      margin-right: 10px;
+  }
+
+  /* .iconWrapper {
+    display: flex;
+    align-items: center;
+    color: rgb(2, 30, 135); 
+    margin-top: -25vh;
+    margin-left: -70vh;
+  } */
+
+/* .butn{
+  padding: 7vh;
+  margin-left: -30vh;
+  margin-top: 5vh;
+}  */
+  
+.small {
+    font-size: 15px; 
+    color: inherit; 
+    padding: 20px;
+} 
+/* Fixing the form */
+.inputWra{
+    display: block;
+    margin-top: -1vh;
+    margin-bottom: 10px;
+}
+.inputLabel {
+    color: var(--whiteColor);
+    /* margin-left: 15vh; */
+    font-size: 15px;
+    display: block;
+}
+  .inputWrapper{
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    /* margin-left: -25vh; */
+    padding-top: 1vh;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+.inputD{
+    margin-left: 10vh;
+}
+.inputDivOne{
+    display: block;
+    margin-top: 10vh;
+    margin-bottom: 10px;
+    margin-left: 55vh;
+    margin-top: -39vh;
+}
+
+  /* Fixing button suivant et précédent */
+
+  .button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10vh;
+  }
+
+  /* .buttonContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+  } */
+  .buttonContainer button {
+    margin-bottom: 10px;
+  }
+  
+.btnPrev{
+    /* background-color: #030a6d;  */
+    background-color: var(--paleOrange);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.btnNext{
+    /* background-color: #030a6d;  */
+    background-color: var(--paleOrange);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 43vh;
+}
+.btnPrev:hover, .btnNext:hover {
+    background-color: #c55404; 
+}
+  

@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+    
+:root{
+    --primaryColor: hsl(221, 55%, 56%);
+    --hoverColor: hsl(26, 75%, 76%);
+    --paleOrange: hsla(25, 83%, 50%, 0.953);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 8%);
+    --bgColor: hsl(113, 11%, 85%);
+    --inputColor: hsl(330, 12%, 97%);
+    --inputColor: hsl(154, 14%, 90%);
+
+    
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;  
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+html{
+    font-size: 90%;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+ li{
+    list-style: none;
+} 
+.icon{
+    font-size: var(--h2FontSize);
+    cursor: pointer;
+}
+
+img, video{
+    height: auto;
+    width: 100%;
+}
+
+.message{
+    display: none;
+}
+ 
+/* .showMessage{
+    display: block;
+    color: var(--whiteColor);
+    padding: 10px;
+    background: rgba(238, 105, 10, 0.979);
+    border-radius: 3px;
+    text-align: center;
+}
+.showMessage{
+    display: block;
+    color:var(--whiteColor) ;
+    background: rgb(247 , 114, 5);
+    border-radius: 3px;
+    text-align: center;
+} */
+
+.btn{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: .8rem 1rem;
+    color: var(--whiteColor);
+    margin: 10px;
+    background-color: rgb(13, 5, 138);
+}
+
+.btn .icon{
+    margin-left: .5rem;
+}
+
+.btn:hover{
+    color: var(--primaryColor);
+    background: var(--paleOrange);
+}
+
+/* Fixing HabitationPage */
+
+.habitationPage{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width:  100%;
+    padding: 20px;
+    margin-left: 90px;
+    margin-top: -5vh;
+    border-radius: 10px;    
+}
+
+.container{
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.videoDiv video{
+    position: absolute;
+    top: 2vh;
+    left: 0;
+    width: 87%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    margin-left: 25vh;
+} 
+.side{
+    margin-top: -1vh;   
+    margin-left: -2vh;
+}
+/* Faixing the titles & h2 & p */
+.textDiv{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: -105vh;
+    margin-left: 40vh;
+} 
+.textD{
+    font-size: 2.5vh;
+    color: #EE6539;
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-left: -30vh;
+    margin-top: 10vh;
+}
+.inputDiv{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-left: 10vh;
+}
+.text{
+    font-size: 2vh;
+    color: var(--paleOrange);
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: start;
+    padding: 20px;
+    margin-left: 10vh;
+}
+.inputWrapOne{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-left: 15vh;
+}
+
+/* Fixing the form */
+/* .inputWra{
+    display: block;
+    margin-top: -1vh;
+    margin-bottom: 10px;
+} */
+.inputWrappLabel {
+    color: rgba(12, 27, 93, 0.932);
+    font-size: 15px;
+    display: block;
+    margin-top: 10px;
+    font-weight: 400;
+  }
+  .iW{
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    padding-top: 1vh;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+.inputWrapTow{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-left: 55vh;
+    margin-top: -47vh;
+}
+.inputWrapThree{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-left: 95vh;
+    margin-top: -49vh;
+}
+
+    /* color: rgba(12, 27, 93, 0.932); */

@@ -1,0 +1,61 @@
+.toggleuBtton {
+    position: relative;
+    display: inline-block;
+    /* margin-left: -40vh; */
+  }
+  
+  .toggleButton button {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+  
+  .toggleButton button.active {
+    background-color: #1308e0;
+    color: #fff;
+  }
+  
+  .toggleButtonLabel {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* .toggleButtonSlider {  
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5%;
+    height: 1%;
+    background-color: #0f0fe7;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out;
+  } */
+  
+  .toggleButton button.active .toggleButtonSlider {
+    transform: translateX(100%);
+}
+.inscriptionField{
+  display: flex;
+  position: relative;
+  margin-left: 6vh;
+  margin-top: 5vh;
+}
+.inputLabel{
+  color: rgba(12, 27, 93, 0.932);
+  font-size: 15px;
+  font-weight: 400;
+  /* display: block; */
+  padding: 20px;
+  margin-left: -1.5vh;
+}
+.inputWrapper{
+  width: 250px;
+  height: 40px;
+  border-radius: 5px;
+  margin-top: 7vh;
+  margin-left: -25vh;
+  padding: 10px 20px;
+  padding: 10px;
+}

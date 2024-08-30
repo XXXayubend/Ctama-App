@@ -1,0 +1,29 @@
+.inputContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: -1.3vh;
+  margin-left: -6vh;
+}
+
+.inputWrapper{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+.inputWrapperLabel{
+  font-weight: bold; 
+
+}
+
+.inputWrapperInput{
+  padding: 10px;
+  border-radius: 5px;
+}
+.iW{
+  padding: 10px;
+  border-radius: 5px;
+  /* margin-left: -5vh; */
+}

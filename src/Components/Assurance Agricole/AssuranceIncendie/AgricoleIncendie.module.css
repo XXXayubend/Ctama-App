@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root{
+    --primaryColor: hsl(221, 55%, 56%);
+    --hoverColor: hsl(26, 75%, 76%);
+    --paleOrange: hsl(23, 94%, 50%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 8%);
+    --bgColor: hsl(113, 11%, 85%);
+    --inputColor: hsl(330, 12%, 97%);
+    --inputColor: hsl(154, 14%, 90%);
+
+    
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;  
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.grid{
+    display: grid;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+html{
+    font-size: 90%;
+}
+
+img, video{
+    height: auto;
+    width: 70%;
+}
+
+
+
+.top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Pages Stylings */
+.IncendiePage{
+    display: grid;
+    height: 70%;
+    width: 70%;
+    border: 1px solid #0000;
+    margin-top: 80vh;
+    margin-left: 30vh;
+    box-shadow: 0 0 10px rgba(0 0 0 0.1);
+    border-radius: 10px; 
+}
+
+.container{
+    margin: 0 auto;
+    padding: 10px;
+    padding-top: 20px;
+} 
+
+.videoDiv video{
+    position: absolute;
+    top: 2vh;
+    left: 0;
+    width: 87%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    margin-left: 25vh;
+} 
+.sidebar{
+    margin-left: -10vh;
+    margin-top: -110.5vh;
+}
+
+.bigTitle{
+    padding: .8rem;
+    background: rgba(12, 27, 93, 0.932);
+    border-radius: 10px;
+    color: white;
+    align-items: end;
+    margin-top: -77vh;
+    margin-left: -5vh;
+    font-size: 15px;
+    justify-content: center;
+    gap: .5rem;
+    transition: .3rem ease;
+    width: 211.4%;
+    height: 6vh;
+}
+/* Faixing the titles & h2 & p */
+.textDiv{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    size: 30vh;
+    font-weight: 800;
+    color: rgba(12, 27, 93, 0.932);
+    margin-top: -85vh;
+    margin-left: 40vh;
+}
+.title{
+    color: rgba(12, 27, 93, 0.932);
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 15px;
+    font-weight: 700;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 2vh;
+    margin-left: -80vh;
+}
+.text{
+    color: var(--whiteColor);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    font-weight: 400;
+    margin-top: 2vh;
+    margin-left: -80vh;
+}
+.formDiv{
+    display: flex;
+    flex-basis: 50%;
+    margin: auto;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.inputDiv{
+    background: none;
+    outline: none;
+    border: none;
+    width: 200px;
+}
+
+.inputOne{
+  background: none;
+  outline: none;
+  border: none;
+  width: 200px;
+  margin-left: 10vh;
+}
+.inputTow{
+  background: none;
+  outline: none;
+  border: none;
+  width: 200px;
+  margin-left: 55vh;
+  margin-top: -30vh;
+}
+.inputWrapLabel{
+    gap: .5rem;
+    padding: 10px;
+    font-size: 2vh;
+    font-weight: 400;
+    color: var(--whiteColor);
+    
+}
+.iW{
+    gap: 1rem;
+    padding: .7rem 1rem;
+    background: var(--inputColor);
+    border-radius: 5px;
+    width: 130%;
+    margin-top: 10px;
+}
+
+.btn{
+    padding: .7rem;
+
+    background: rgba(12, 27, 93, 0.932);
+    border-radius: 10px;
+    color: var(--whiteColor);
+    align-items: end;
+    margin: auto;
+    justify-content: center;
+    font-size: 16px;
+    margin-left: 10vh;
+    cursor: pointer;
+
+}
+
+
+

@@ -1,0 +1,67 @@
+
+.inputContainer {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10vh;
+  }
+  
+  .inputWrapper{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-right: 10px;
+    padding: 10px;
+  }
+  
+  .inputWrapperLabel{
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: aliceblue;
+  }
+  
+  .inputWrapperInput{
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .inputDiv{
+    /* flex-wrap: wrap; */
+    display: flex;
+    margin-left: 100px;
+    margin-top: 7px;
+    /* margin-bottom: 10px; */
+  }
+  
+  .inputWrapp {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px; 
+  }
+  
+  .inputWrapLabel {
+    font-weight: bold;
+    margin-right: 20px;
+    padding-right: 20px;
+    margin-left: 30px;
+    color: aliceblue;
+    /* padding: 10px;
+    margin-bottom: 10px; */
+    /* margin-right: 20px;
+    padding-right: 20px;
+    margin-left: -20px;
+    margin-bottom: 20px; */
+  }
+  
+  .iW { 
+    padding: 10px;
+    border-radius: 5px;
+    padding-top: 10px;
+    /* font-size: 17px;
+    padding: .5rem 0;
+    display: block;
+    border-radius: 5px;
+    background-color: var(--whiteColor); */
+  }
+
+
